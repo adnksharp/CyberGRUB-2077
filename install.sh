@@ -18,7 +18,7 @@ fi
 
 # Copy theme
 if [ ! -d "$THEME_DIR/$THEME_NAME" ]; then
-    sudo cp -r $THEME_NAME /$THEME_DIR
+    sudo cp -r $THEME_NAME/$THEME_DIR
 fi
 
 # Modify GRUB
