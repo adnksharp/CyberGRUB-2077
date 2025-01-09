@@ -18,14 +18,16 @@ fi
 
 # Copy theme
 if [ ! -d "$THEME_DIR/$THEME_NAME" ]; then
-    sudo cp -r $THEME_NAME/$THEME_DIR
+    sudo cp -r $THEME_NAME/ $THEME_DIR
 fi
 
 # Modify GRUB
 if grep -q "GRUB_THEME=" "$GRUB_CFG"; then
     sed -i "s|^GRUB_THEME=.*|GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"|" "$GRUB_CFG"
 else
-    echo "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"" >> "$GRUB_CFG"
+    # Added extra line before the GRUB_THEME line
+    echo "" >> "$GRUB_CFG"
+    echo "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"" >>"$GRUB_CFG"
 fi
 
 # Updating GRUB
