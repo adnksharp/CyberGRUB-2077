@@ -36,12 +36,12 @@ else
     printf "$LNG_DIR_OK"
 fi
 
-# check if git is usable
+# update repo with git
 printf "$LNG_GIT_CHECK"
 # sleep 2
 if command -v git >/dev/null 2>&1; then
-    git reset --hard > dev/null 2>&1
-    git pull --rebase > dev/null 2>&1
+    git reset --hard 
+    git pull --rebase
     printf "$LNG_GIT_OK"
 else
     printf "$LNG_GIT_FAIL"
