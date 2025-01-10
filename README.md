@@ -2,6 +2,10 @@
 
 ![](https://i.imgur.com/EgtSwVk.png)
 
+<a href="README-es.md">
+	<img src="https://img.shields.io/badge/ESPAÑOL-black?style=for-the-badge" alt="Twitter Badge"/>
+</a>
+
 GRUB Theme inspired by Cyberpunk 2077.
 
 ## Installation
@@ -18,6 +22,6 @@ git clone https://github.com/adnksharp/CyberGRUB-2077
 cd CyberGRUB-2077 ; sudo ./install.sh
 ```
 
-![](out.svg)
+![](img/out.svg)
 
 3. Test your new theme
