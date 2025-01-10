@@ -19,7 +19,7 @@ fi
 
 # Check root
 printf "$LNG_ROOT_CHECK"
-sleep 2
+# sleep 2
 if [ "$EUID" -ne 0 ]; then
     printf "$LNG_ROOT_FAIL"
     exit 1
@@ -28,7 +28,7 @@ printf "$LNG_ROOT_OK"
 
 # Create THEME_DIR if it doesn't exist
 printf "$LNG_DIR_CHECK"
-sleep 2
+# sleep 2
 if [ ! -d "$THEME_DIR" ]; then
     mkdir -p "$THEME_DIR"
     printf "$LNG_DIR_FAIL"
@@ -38,7 +38,7 @@ fi
 
 # check if git is usable
 printf "$LNG_GIT_CHECK"
-sleep 2
+# sleep 2
 if command -v git >/dev/null 2>&1; then
     #check if script is executed in THEME_NAME
     # if  [ "${PWD##*/}" != "$THEME_NAME" ]; then
@@ -46,8 +46,8 @@ if command -v git >/dev/null 2>&1; then
 		git clone $THEME_NAME > /dev/null 2>&1 
         cd $THEME_NAME
     fi
-    #git reset --hard >dev/null 2>&1
-    #git pull --rebase >dev/null 2>&1
+    git reset --hard > dev/null 2>&1
+    git pull --rebase > dev/null 2>&1
     printf "$LNG_GIT_OK"
 else
     printf "$LNG_GIT_FAIL"
@@ -56,8 +56,8 @@ fi
 
 # Copy theme
 printf "$LNG_CP_CHECK"
-sleep 2
-cp -r $THEME_NAME $THEME_DIR >/dev/null 2>&1 
+# sleep 2
+cp -r $THEME_NAME $THEME_DIR > /dev/null 2>&1 
 if [ $? -eq 0 ]; then
 	printf "$LNG_CP_OK"
 else
@@ -66,6 +66,8 @@ else
 fi
 
 # Modify GRUB
+printf "$LNG_EDIT_CHECK"
+# sleep 2
 if grep -q "GRUB_THEME=" "$GRUB_CFG"; then
     sed -i "s|^GRUB_THEME=.*|GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"|" "$GRUB_CFG"
 else
@@ -73,18 +75,20 @@ else
     echo "" >> "$GRUB_CFG"
     echo "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"" >>"$GRUB_CFG"
 fi
+printf "$LNG_EDIT_OK"
 
 # Updating GRUB
-echo "Updating GRUB..."
-if command -v grub-mkconfig >/dev/null 2>&1; then
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
+printf "$LNG_UP_CHECK"
+if command -v grub-mkconfig > /dev/null 2>&1; then
+    sudo grub-mkconfig -o /boot/grub/grub.cfg > /dev/null 2>&1
     if [ $? -ne 0 ]; then
-        echo "Error updating GRUB."
+        printf "$LNG_UP_FAIL"
         exit 1
     fi
+    printf "$LNG_UP_OK"
 else
-    echo "The command grub-mkconfig is not available. Please ensure GRUB is properly installed."
+    printf "$LNG_UP_OK"
     exit 1
 fi
 
-echo "The theme has been installed succesfully. You will now see it at the next reboot"
+printf "$LNG_FINISH"
