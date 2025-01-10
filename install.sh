@@ -61,7 +61,7 @@ fi
 
 # Modify GRUB
 printf "$LNG_EDIT_CHECK"
-# sleep 2
+# sleep 4
 if grep -q "GRUB_THEME=" "$GRUB_CFG"; then
     sed -i "s|^GRUB_THEME=.*|GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"|" "$GRUB_CFG"
 else
@@ -81,7 +81,7 @@ if command -v grub-mkconfig > /dev/null 2>&1; then
     fi
     printf "$LNG_UP_OK"
 else
-    printf "$LNG_UP_OK"
+    printf "$LNG_NO_GRUB"
     exit 1
 fi
 
