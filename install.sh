@@ -46,8 +46,8 @@ if command -v git >/dev/null 2>&1; then
 		git clone $THEME_NAME > /dev/null 2>&1 
         cd $THEME_NAME
     fi
-    git reset --hard > dev/null 2>&1
-    git pull --rebase > dev/null 2>&1
+    #git reset --hard >dev/null 2>&1
+    #git pull --rebase >dev/null 2>&1
     printf "$LNG_GIT_OK"
 else
     printf "$LNG_GIT_FAIL"
@@ -55,8 +55,14 @@ else
 fi
 
 # Copy theme
-if [ ! -d "$THEME_DIR/$THEME_NAME" ]; then
-    sudo cp -r $THEME_NAME/ $THEME_DIR
+printf "$LNG_CP_CHECK"
+sleep 2
+cp -r $THEME_NAME $THEME_DIR >/dev/null 2>&1 
+if [ $? -eq 0 ]; then
+	printf "$LNG_CP_OK"
+else
+	printf "$LNG_CP_FAIL"
+	exit 1
 fi
 
 # Modify GRUB
