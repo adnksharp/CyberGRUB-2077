@@ -10,7 +10,12 @@ source ./scripts/outs.sh
 
 printf "$OUT_TITLE"
 
-exit 1
+# Set lang outs
+if [ ! -f "$SYS_LANG" ]; then
+	source ./lang/en.sh
+else
+	source "$SYS_LANG"
+fi
 
 # Check root
 if [ "$EUID" -ne 0 ]; then
