@@ -40,12 +40,6 @@ fi
 printf "$LNG_GIT_CHECK"
 # sleep 2
 if command -v git >/dev/null 2>&1; then
-    #check if script is executed in THEME_NAME
-    # if  [ "${PWD##*/}" != "$THEME_NAME" ]; then
-    if [ ! -d "$THEME_NAME" ]; then
-		git clone $THEME_NAME > /dev/null 2>&1 
-        cd $THEME_NAME
-    fi
     git reset --hard > dev/null 2>&1
     git pull --rebase > dev/null 2>&1
     printf "$LNG_GIT_OK"
