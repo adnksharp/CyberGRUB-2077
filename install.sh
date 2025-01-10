@@ -19,6 +19,7 @@ fi
 
 # Check root
 printf "$LNG_ROOT_CHECK"
+# sleep 1
 if [ "$EUID" -ne 0 ]; then
     printf "$LNG_ROOT_FAIL"
     exit 1
@@ -26,8 +27,13 @@ fi
 printf "$LNG_ROOT_OK"
 
 # Create THEME_DIR if it doesn't exist
+printf "$LNG_DIR_CHECK"
+# sleep 1
 if [ ! -d "$THEME_DIR" ]; then
-    sudo mkdir -p "$THEME_DIR"
+    mkdir -p "$THEME_DIR"
+    printf "$LNG_DIR_FAIL"
+else
+    printf "$LNG_DIR_OK"
 fi
 
 # Copy theme
