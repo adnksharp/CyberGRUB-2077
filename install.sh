@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 THEME_NAME="CyberGRUB-2077"
 THEME_URL="https://github.com/adnksharp/CyberGRUB-2077"
@@ -18,10 +18,12 @@ else
 fi
 
 # Check root
+printf "$LNG_ROOT_CHECK"
 if [ "$EUID" -ne 0 ]; then
-    echo "This script must be run as root (sudo)"
+    printf "$LNG_ROOT_FAIL"
     exit 1
 fi
+printf "$LNG_ROOT_OK"
 
 # Create THEME_DIR if it doesn't exist
 if [ ! -d "$THEME_DIR" ]; then
