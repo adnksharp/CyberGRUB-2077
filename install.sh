@@ -4,6 +4,13 @@ THEME_NAME="CyberGRUB-2077"
 THEME_URL="https://github.com/adnksharp/CyberGRUB-2077"
 THEME_DIR="/boot/grub/themes"
 GRUB_CFG="/etc/default/grub"
+SYS_LANG="./lang/${LANG:0:2}.sh"
+
+source ./scripts/outs.sh
+
+printf "$OUT_TITLE"
+
+exit 1
 
 # Check root
 if [ "$EUID" -ne 0 ]; then
