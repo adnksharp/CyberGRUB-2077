@@ -3,7 +3,7 @@
 ![](https://i.imgur.com/EgtSwVk.png)
 
 <a href="README-es.md">
-	<img src="https://img.shields.io/badge/ESPAÑOL-black?style=for-the-badge" alt="Twitter Badge"/>
+	<img src="https://img.shields.io/badge/ESPAÑOL-white?style=for-the-badge"/>
 </a>
 
 GRUB Theme inspired by Cyberpunk 2077.
@@ -28,7 +28,7 @@ cd CyberGRUB-2077
 sudo ./install.sh
 ```
 
-	or 
+or 
 
 ```shell
 sudo $SHELL ./install.sh
