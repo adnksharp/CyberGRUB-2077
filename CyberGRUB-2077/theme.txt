@@ -2,8 +2,8 @@
 
 # general settings
 title-text: ""
-desktop-image: "img/background_f.png"
-desktop-color: "#808080"
+desktop-image: "background.png"
+desktop-color: "#000000"
 terminal-font: "Terminus (TTF) Regular 16"
 terminal-left: "0"
 terminal-top: "0"
@@ -32,13 +32,13 @@ terminal-border: "0"
 }
 
 + image {
-	file = "img/logo.png"
+	file = "logo.png"
 	top = 0
 	left = 100%-200
 }
 
 + image {
-	file = "img/label.png"
+	file = "label.png"
 	top = 8
 	left = 8
 }
@@ -102,7 +102,7 @@ terminal-border: "0"
   fg_color = "#ffffff"
   bg_color = "#ffffff"
   border_color = "#f75d54"
-  highlight_style = "img/progress_*.png"
+  highlight_style = "progress_*.png"
 }
 
 + label {
