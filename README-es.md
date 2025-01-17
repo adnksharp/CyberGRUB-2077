@@ -16,10 +16,22 @@ Tema de GRUB inspirado en Cyberpunk 2077.
 git clone https://github.com/adnksharp/CyberGRUB-2077
 ```
 
-2. Entra en la carpeta y ejecuta el script de instalación
+2. Entra en la carpeta donde se descargó el tema
 
 ```shell
-cd CyberGRUB-2077 ; sudo ./install.sh
+cd CyberGRUB-2077
+```
+
+3. Ejecuta el script de instalación como administrador
+
+```shell
+sudo ./install.sh
+```
+
+	o
+
+```shell
+sudo $SHELL ./install.sh
 ```
 
 ![](img/out_es.svg)
