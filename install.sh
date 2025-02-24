@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 THEME_NAME="CyberGRUB-2077"
 THEME_URL="https://github.com/adnksharp/CyberGRUB-2077"
