@@ -58,7 +58,7 @@ terminal-border: "0"
 	top = 66
 	width = 100%
 	color = "#842624"
-	text = "[      ] LOAD OPERATIVE SYSTEM"
+	text = "[      ] LOAD OPERATING SYSTEM"
 }
 
 + label {
