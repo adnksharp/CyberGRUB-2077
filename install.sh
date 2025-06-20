@@ -86,8 +86,6 @@ while true; do
 	esac
 done
 
-exit 1
-
 # Check root
 printf "$LNG_ROOT_CHECK"
 # sleep 2
