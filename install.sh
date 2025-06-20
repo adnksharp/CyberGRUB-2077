@@ -131,7 +131,7 @@ fi
 # Copy logo.png to theme directory
 printf "$LNG_LOGO_CHECK"
 # sleep 2
-cp -f "./img/logos/${LOGO}.png" "${THEME_DIR}/${THEME_NAME}/img/logo.png" > /dev/null 2>&1
+cp -f "./img/logos/${LOGO}.png" "${THEME_DIR}/${THEME_NAME}/logo.png" > /dev/null 2>&1
 if [ $? -eq 0 ]; then
 	printf "$LNG_LOGO_OK"
 else
