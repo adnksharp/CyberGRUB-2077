@@ -1,8 +1,17 @@
-#ENG OUT MESSAGES
+#ES OUT MESSAGES
+# help
+LNG_HELP="\033[1A\033[K║ SCRIPT DE INSTALACIÓN$(SPACE $OUT_LEN-22)║\n║$(SPACE $OUT_LEN)║\n║\e[1;31m Uso:$(SPACE $OUT_LEN-5)║\n║\e[1;36m   sudo \$SHELL $0 <operación> [...]\e[0m$(SPACE $OUT_LEN-45)\e[1;31m║\n║$(SPACE $OUT_LEN)║\n║\e[1;31m Operaciones:$(SPACE $OUT_LEN-13)║\n║\e[1;36m   -h, --help: Mostrar este mensaje de ayuda$(SPACE $OUT_LEN-44)\e[1;31m║\n║\e[1;36m   -l, --list: Listar los logos disponibles$(SPACE $OUT_LEN-43)\e[1;31m║\n║\e[1;36m   -L, --logo <logo>: Especificar un logo a usar (por defecto 'samurai')$(SPACE $OUT_LEN-72)\e[1;31m║\n║\e[1;36m   Por defecto, se usará el logo 'samurai' si no se especifica ninguno$(SPACE $OUT_LEN-70)\e[1;31m║\n$(MARGIN ╚ ┘)\n"
+# list logos
+LNG_LOGO_TITLE="\033[1A\033[K║ LOGOS DISPONIBLES$(SPACE $OUT_LEN-18)║\n"
+LNG_ERR_LOGO="\033[1A\033[K\e[1;31m║\e[1;36m Logo no encontrado. Puedes listar los logos disponibles con \e[1;31m-l\e[1;36m o \e[1;31m--list\e[1;36m.\e[0m$(SPACE $OUT_LEN-73)\e[1;31m║\n$(MARGIN ╚ ┘)\n"
+# copy logo
+LNG_LOGO_CHECK="\033[1A\033[K║ COPIANDO LOGO...$(SPACE $OUT_LEN-20)║\n$(MARGIN ╚ ┘)\n"
+LNG_LOGO_FAIL="\033[2A\033[K║ OCURRIÓ UN ERROR MIENTRAS SE COPIABA EL LOGO$(SPACE $OUT_LEN-51)║\n$(MARGIN ╚ ┘)\n"
+LNG_LOGO_OK="\033[2A\033[K║ LOGO COPIADO$(SPACE $OUT_LEN-13)║\n$(MARGIN ╚ ┘)\n"
 # check running as root
 LNG_ROOT_CHECK="\033[1A\033[K║ VERIFICANDO ROOT...$(SPACE $OUT_LEN-20)║\n$(MARGIN ╚ ┘)\n"
 LNG_ROOT_FAIL="\033[2A\033[K║ ACCESO DENEGADO$(SPACE $OUT_LEN-16)║\n║     \e[1;36mEjectuta este script como administrador [sudo].\e[1;31m$(SPACE $OUT_LEN-52)║\n$(MARGIN ╚ ┘)\e[0m\n"
-LNG_ROOT_OK="\033[2A\033[K║ ROOT OK$(SPACE $OUT_LEN-8)║\n$(MARGIN ╚ ┘)\n"
+LNG_ROOT_OK="\033[1A\033[K║ ROOT OK$(SPACE $OUT_LEN-8)║\n$(MARGIN ╚ ┘)\n"
 # check if /boot/grub/themes exist
 LNG_DIR_CHECK="\033[1A\033[K║ VERIFICANDO EL DIRECTORIO BOOT/THEMES...$(SPACE $OUT_LEN-41)║\n$(MARGIN ╚ ┘)\n"
 LNG_DIR_FAIL="\033[2A\033[K║ DIRECTORIO BOOT/THEMES CREADO$(SPACE $OUT_LEN-30)║\n$(MARGIN ╚ ┘)\n"
