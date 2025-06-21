@@ -71,7 +71,7 @@ while true; do
 				exit 1
 			else
 				LOGO="$2"
-				printf "\033[1A\033[K║ [\e[1;36m$LOGO\e[1;31m] $(SPACE $OUT_LEN-$((${#LOGO} + 4)))║\n"
+				printf "\033[1A\033[K║ [\e[1;36m$LOGO\e[1;31m] $(SPACE $OUT_LEN-$((${#LOGO} + 4)))║\n\e[1;31m$(MARGIN ╚ ┘)\n"
 			fi
 			shift 2
 			;;
