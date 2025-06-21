@@ -22,42 +22,42 @@
     <img src="https://img.shields.io/badge/PORTUGUÊS-white?style=for-the-badge"/>
 </a>
 
-GRUB Theme inspired by Cyberpunk 2077.
+Tema do GRUB inspirado em Cyberpunk 2077.
 
-## Installation
+## Instalação
 
-1. Clone the repo
+1. Clone o repositório
 
 ```shell
 git clone https://github.com/adnksharp/CyberGRUB-2077
 ```
 
-2. Go into the folder where the repository was downloaded
+2. Vá para a pasta onde o repositório foi baixado
 
 ```shell
 cd CyberGRUB-2077
 ```
 
-3. Execute the installation script as admin
+3. Execute o script de instalação como administrador
 
 ```shell
 sudo $SHELL ./install.sh
 ```
 
-![](img/out.svg)
+![](img/out-pt.svg)
 
-Optionally, you can specify a different logo by using the `-L` or `--logo` options:
+Opcionalmente, você pode especificar um logotipo diferente usando as opções `-L` ou `--logo`:
 
 ```shell
 sudo $SHELL ./install.sh -L <logo>
 ```
 
-For see the list of available logos, run:
+Para ver a lista de logotipos disponíveis, execute:
 
 ```shell
 sudo $SHELL ./install.sh -l
 ```
 
-![](img/list.svg)
+![](img/list-pt.svg)
 
-4. Test your new theme
+4. Teste seu novo tema

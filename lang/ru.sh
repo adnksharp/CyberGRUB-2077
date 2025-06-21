@@ -11,7 +11,7 @@ LNG_LOGO_OK="\033[2A\033[K║ ЛОГОТИП СКОПИРОВАН$(SPACE $OUT_LE
 # check running as root
 LNG_ROOT_CHECK="\033[1A\033[K║ ПРОВЕРКА РУТА...$(SPACE $OUT_LEN-17)║\n$(MARGIN ╚ ┘)\n"
 LNG_ROOT_FAIL="\033[2A\033[K║ ДОСТУП ОТКЛОНЕН$(SPACE $OUT_LEN-16)║\n║     \e[1;36mЗапустите этот скрипт от рута [sudo].\e[1;31m$(SPACE $OUT_LEN-42)║\n$(MARGIN ╚ ┘)\e[0m\n"
-LNG_ROOT_OK="\032[2A\033[K║ РУТ: OK$(SPACE $OUT_LEN-8)║\n$(MARGIN ╚ ┘)\n"
+LNG_ROOT_OK="\033[2A\033[K║ РУТ: OK$(SPACE $OUT_LEN-8)║\n$(MARGIN ╚ ┘)\n"
 # check if /boot/grub/themes exist
 LNG_DIR_CHECK="\033[1A\033[K║ ПРОВЕРКА ДИРЕКТОРИИ ТЕМ ЗАГРУЗКИ...$(SPACE $OUT_LEN-33)║\n$(MARGIN ╚ ┘)\n"
 LNG_DIR_FAIL="\033[2A\033[K║ ДИРЕКТОРИЯ ТЕМ ЗАГРУЗКИ ИНИЦИАЛИЗИРОВАНА$(SPACE $OUT_LEN-41)║\n$(MARGIN ╚ ┘)\n"
