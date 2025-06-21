@@ -1,6 +1,6 @@
 # CyberGRUB-2077
 
-![](https://i.imgur.com/EgtSwVk.png)
+![](./preview.png)
 
 |![4m](./img/logos/4m.png)|![alma](./img/logos/alma.png)|![alpine](./img/logos/alpine.png)|![antergos](./img/logos/antergos.png)|![antix](./img/logos/antix.png)|![arch](./img/logos/arch.png)|![bedrock](./img/logos/bedrock.png)|![clear](./img/logos/clear.png)|![debian](./img/logos/debian.png)|![deepin](./img/logos/deepin.png)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|---|
