@@ -44,6 +44,9 @@ cd CyberGRUB-2077
 sudo $SHELL ./install.sh
 ```
 
+> [!IMPORTANT]
+> En el caso de fish, es preferible utilizar `install.fish`
+
 ![](img/out-es.svg)
 
 Optionamente, puedes especificar un logo diferente usando las opciones `-L` o `--logo`:
