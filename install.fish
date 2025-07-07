@@ -91,8 +91,8 @@ end
 printf "$LNG_GIT_CHECK"
 # sleep 2
 if type -q git
-	git reset --hard
-	git pull --rebase
+	#git reset --hard
+	#git pull --rebase
 	if test $status -ne 0
 		printf "$LNG_GIT_FAIL"
 		exit 1
