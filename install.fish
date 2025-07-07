@@ -129,10 +129,9 @@ printf "$LNG_EDIT_CHECK"
 if grep -qE "^#?GRUB_THEME=" "$GRUB_CFG"; then
     sed -i -E "s|^#?GRUB_THEME=.*|$GRUB_THEME_PATH|" "$GRUB_CFG"
 else
-    # Added extra line before the GRUB_THEME line
     echo "" >> "$GRUB_CFG"
-     echo "$GRUB_THEME_PATH" >> "$GRUB_CFG"
-fi
+	echo "$GRUB_THEME_PATH" >> "$GRUB_CFG"
+end
 printf "$LNG_EDIT_OK"
 
 # Update GRUB
