@@ -123,14 +123,14 @@ end
 printf "$LNG_LOGO_OK"
 
 # Modify GRUB
-set GRUB_THEME_PATH "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\""
+set -l GRUB_THEME_PATH "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\""
 printf "$LNG_EDIT_CHECK"
 # sleep 4
-if grep -qE "^#?GRUB_THEME=" "$GRUB_CFG"; then
+if grep -qE "^#?GRUB_THEME=" "$GRUB_CFG"
     sed -i -E "s|^#?GRUB_THEME=.*|$GRUB_THEME_PATH|" "$GRUB_CFG"
 else
     echo "" >> "$GRUB_CFG"
-	echo "$GRUB_THEME_PATH" >> "$GRUB_CFG"
+    echo "$GRUB_THEME_PATH" >> "$GRUB_CFG"
 end
 printf "$LNG_EDIT_OK"
 
