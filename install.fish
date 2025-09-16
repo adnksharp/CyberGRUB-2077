@@ -2,7 +2,7 @@
 
 set THEME_NAME "CyberGRUB-2077"
 set THEME_URL "https://github.com/adnksharp/CyberGRUB-2077"
-set THEME_DIR "/boot/grub/themes"
+# set THEME_DIR "/boot/grub/themes"
 set GRUB_CFG "/etc/default/grub"
 set LNG (string sub -l 2 $LANG)
 set SYS_LANG "./lang/$LNG.fish"
@@ -11,6 +11,22 @@ set LOGO "samurai"
 source ./scripts/outs.fish
 
 printf "$OUT_TITLE"
+
+# Get distro
+set DISTRO (grep -E '^ID=' /etc/os-release | cut -d '=' -f 2 | tr -d '"')
+if test -z "$DISTRO"
+	set DISTRO (lsb_release -si | tr '[:upper:]' '[:lower:]')
+	if test -z "$DISTRO"
+		set DISTRO "linux"
+	end
+end
+
+# Set theme dir based on distro
+if test "$DISTRO" = "fedora" -o "$DISTRO" = "rhel" -o "$DISTRO" = "centos" -o "$DISTRO" = "rocky" -o "$DISTRO" = "almalinux"
+	set THEME_DIR "/boot/grub2/themes"
+else
+	set THEME_DIR "/boot/grub/themes"
+end
 
 # Set lang outs
 if test -f "$SYS_LANG"

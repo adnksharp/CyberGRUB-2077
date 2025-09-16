@@ -2,7 +2,6 @@
 
 THEME_NAME="CyberGRUB-2077"
 THEME_URL="https://github.com/adnksharp/CyberGRUB-2077"
-THEME_DIR="/boot/grub/themes"
 GRUB_CFG="/etc/default/grub"
 SYS_LANG="./lang/${LANG:0:2}.sh"
 LOGO="samurai"
@@ -10,6 +9,28 @@ LOGO="samurai"
 source ./scripts/outs.sh
 
 printf "$OUT_TITLE"
+
+# Get distro
+if [ -f /etc/os-release ]; then
+	. /etc/os-release
+	DISTRO=$ID
+elif [ -f /etc/lsb-release ]; then
+	. /etc/lsb-release
+	DISTRO=$DISTRIB_ID
+elif [ -f /etc/debian_version ]; then
+	DISTRO="debian"
+elif [ -f /etc/redhat-release ]; then
+	DISTRO="rhel"
+else
+	DISTRO="linux"
+fi
+
+# Define THEME_DIR based on distro
+if [[ "$DISTRO" == "fedora" || "$DISTRO" == "centos" || "$DISTRO" == "rhel" || "$DISTRO" == "rocky" || "$DISTRO" == "almalinux" ]]; then
+	THEME_DIR="/boot/grub2/themes"
+else
+	THEME_DIR="/boot/grub/themes"
+fi
 
 # Set lang outs
 if [ ! -f "$SYS_LANG" ]; then
