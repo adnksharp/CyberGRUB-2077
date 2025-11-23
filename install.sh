@@ -175,16 +175,30 @@ printf "$LNG_EDIT_OK"
 
 # Updating GRUB
 printf "$LNG_UP_CHECK"
-if command -v grub-mkconfig > /dev/null 2>&1; then
-    sudo grub-mkconfig -o /boot/grub/grub.cfg > /dev/null 2>&1
-    if [ $? -ne 0 ]; then
-        printf "$LNG_UP_FAIL"
-        exit 1
-    fi
-    printf "$LNG_UP_OK"
+if [[ "$DISTRO" == "fedora" || "$DISTRO" == "centos" || "$DISTRO" == "rhel" || "$DISTRO" == "rocky" || "$DISTRO" == "almalinux" ]]; then
+	if command -v grub2-mkconfig > /dev/null 2>&1; then
+		sudo grub2-mkconfig -o /boot/grub2/grub.cfg > /dev/null 2>&1
+		if [ $? -ne 0 ]; then
+			printf "$LNG_UP_FAIL"
+			exit 1
+		fi
+		printf "$LNG_UP_OK"
+	else
+		printf "$LNG_NO_GRUB"
+		exit 1
+	fi
 else
-    printf "$LNG_NO_GRUB"
-    exit 1
+	if command -v grub-mkconfig > /dev/null 2>&1; then
+		sudo grub-mkconfig -o /boot/grub/grub.cfg > /dev/null 2>&1
+		if [ $? -ne 0 ]; then
+			printf "$LNG_UP_FAIL"
+			exit 1
+		fi
+		printf "$LNG_UP_OK"
+	else
+		printf "$LNG_NO_GRUB"
+		exit 1
+	fi
 fi
 
 printf "$LNG_FINISH"
