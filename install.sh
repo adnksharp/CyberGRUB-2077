@@ -57,27 +57,27 @@ while true; do
 			;;
 		-l|--list)
 			# List available logos from the img/logos directory
-			LOGOS="$(ls -l ./img/logos | awk '/^-/ {print $9}' | sed 's/\.png$//')"
+			LOGOS="$(find ./img/logos -type f -printf '%f\n')"
 			LOGOS=($(echo "$LOGOS" | tr ' ' '\n'))
 
 			printf "$LNG_LOGO_TITLE"
 			
 			for ((i=1; i<=${#LOGOS[@]}; i++)); do
-				if (((i - 1) % 5 == 0)); then
+				if (((i - 1) % 4 == 0)); then
 					printf "\e[1;31m║\e[1;36m"
 				fi
 				printf "  ${LOGOS[i]}"
-				for ((j=${#LOGOS[i]}; j<13; j++)); do
+				for ((j=${#LOGOS[i]}; j<17; j++)); do
 					printf " "
 				done
-				if (((i) % 5 == 0)); then
+				if (((i) % 4 == 0)); then
 					printf " \e[1;31m║\e[0m\n"
 				else
 					printf " "
 				fi
 			done
-			if [ $(( ${#LOGOS[@]} % 5 )) -ne 0 ]; then
-				LLL=$((${#LOGOS[@]} % 5 * 16))
+			if [ $(( ${#LOGOS[@]} % 4 )) -ne 0 ]; then
+				LLL=$((${#LOGOS[@]} % 4 * 20))
 				printf "$(SPACE $OUT_LEN-$LLL)\e[1;31m║\n$(MARGIN ╚ ┘)\e[0m\n"
 			else
 				printf "\e[1;31m$(MARGIN ╚ ┘)\e[0m\n"
