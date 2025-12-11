@@ -41,6 +41,9 @@ else
 	exit 1
 end
 
+set THEME_DIR "/boot/$GRUB_ALIAS/themes"
+set GRUB_CONFIG_PATH "/boot/$GRUB_ALIAS/grub.cfg"
+
 # Set lang outs
 if test -f "$SYS_LANG"
     source "$SYS_LANG"
@@ -58,44 +61,49 @@ if set -ql _flag_h
 end
 
 if set -ql _flag_l
-	set LOGOS (find ./img/logos -maxdepth 1 -name "*.png" | string replace --regex '\.png$' '' | string replace --regex '.*/' '')
+	set LOGOS (find ./img/logos -type f -name "*.png" | string replace --regex '\.png$' '' | string replace --regex '.*/' '')
 	
 	printf "$LNG_LOGO_TITLE"
 	
 	set i 0
 	for logo in $LOGOS
 		set i (math "$i + 1")
-		set z (math "($i - 1) % 5")
+		set z (math "($i - 1) % 4")
 		if test "$z" -eq 0
 			printf "\e[1;31m║\e[1;36m"
-        end
-        printf "  %s" "$logo"
+		end
+		printf "  %s" "$logo"
 		set logo_len (string length "$logo")
-    	for j in (seq $logo_len 12)
-            printf " "
-        end
-		set y (math "($i % 5)")
+		for j in (seq $logo_len 16)
+			printf " "
+		end
+		set y (math "($i % 4)")
 		if test "$y" -eq 0
-        	printf " \e[1;31m║\e[0m\n"
-        else
-            printf " "
-        end
+			printf " \e[1;31m║\e[0m\n"
+		else
+			printf " "
+		end
 	end
-	printf "\e[1;31m$(MARGIN ╚ ┘)\e[0m\n"
+
+	if test (math "$i % 4") -ne 0
+		set LLL (math "(4 - ($i % 4)) * 20")
+		printf "$(SPACE (math "$OUT_LEN - $LLL"))\e[1;31m║\n"
+	end
+	printf "\e[1;31m$(MARGIN '╚' '┘')\e[0m\n"
 	exit 0
 end
 
+
 if set -ql _flag_L
-	# LOGO=_flag_L
 	if not test -f "./img/logos/$_flag_L.png"
-        printf "$LNG_ERR_LOGO"
-        exit 1
-    else
-        set LOGO "$_flag_L"
+		printf "$LNG_ERR_LOGO"
+		exit 1
+	else
+		set LOGO "$_flag_L"
 		set z (string length \"$LOGO\")
-        printf "\033[1A\033[K║ [\e[1;36m%s\e[1;31m] %s║\n\e[1;31m%s\e[0m\n" "$LOGO" (SPACE (math "$OUT_LEN - $z - 2")) (MARGIN '╚' '┘')
-    end
+	end
 end
+printf "\033[1A\033[K║ [\e[1;36m%s\e[1;31m] %s║\n\e[1;31m%s\e[0m\n" "$LOGO" (SPACE (math "$OUT_LEN - $z - 2")) (MARGIN '╚' '┘')
 
 # Check root
 printf "$LNG_ROOT_CHECK"
