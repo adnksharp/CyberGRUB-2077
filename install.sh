@@ -2,7 +2,8 @@
 
 THEME_NAME="CyberGRUB-2077"
 THEME_URL="https://github.com/adnksharp/CyberGRUB-2077"
-GRUB_CFG="/etc/default/grub"
+
+GRUB_ALIAS="grub"
 SYS_LANG="./lang/${LANG:0:2}.sh"
 LOGO="samurai"
 
@@ -27,10 +28,11 @@ fi
 
 # Define THEME_DIR based on distro
 if [[ "$DISTRO" == "fedora" || "$DISTRO" == "centos" || "$DISTRO" == "rhel" || "$DISTRO" == "rocky" || "$DISTRO" == "almalinux" ]]; then
-	THEME_DIR="/boot/grub2/themes"
-else
-	THEME_DIR="/boot/grub/themes"
+	GRUB_ALIAS="grub2"
 fi
+
+THEME_DIR="/boot/${GRUB_ALIAS}/themes"
+GRUB_CFG="/etc/default/grub"
 
 # Set lang outs
 if [ ! -f "$SYS_LANG" ]; then
@@ -175,30 +177,16 @@ printf "$LNG_EDIT_OK"
 
 # Updating GRUB
 printf "$LNG_UP_CHECK"
-if [[ "$DISTRO" == "fedora" || "$DISTRO" == "centos" || "$DISTRO" == "rhel" || "$DISTRO" == "rocky" || "$DISTRO" == "almalinux" ]]; then
-	if command -v grub2-mkconfig > /dev/null 2>&1; then
-		sudo grub2-mkconfig -o /boot/grub2/grub.cfg > /dev/null 2>&1
-		if [ $? -ne 0 ]; then
-			printf "$LNG_UP_FAIL"
-			exit 1
-		fi
-		printf "$LNG_UP_OK"
-	else
-		printf "$LNG_NO_GRUB"
+if command -v grub2-mkconfig > /dev/null 2>&1; then
+	sudo grub2-mkconfig -o /boot/${GRUB_ALIAS}/grub.cfg > /dev/null 2>&1
+	if [ $? -ne 0 ]; then
+		printf "$LNG_UP_FAIL"
 		exit 1
 	fi
+	printf "$LNG_UP_OK"
 else
-	if command -v grub-mkconfig > /dev/null 2>&1; then
-		sudo grub-mkconfig -o /boot/grub/grub.cfg > /dev/null 2>&1
-		if [ $? -ne 0 ]; then
-			printf "$LNG_UP_FAIL"
-			exit 1
-		fi
-		printf "$LNG_UP_OK"
-	else
-		printf "$LNG_NO_GRUB"
-		exit 1
-	fi
+	printf "$LNG_NO_GRUB"
+	exit 1
 fi
 
 printf "$LNG_FINISH"
