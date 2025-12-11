@@ -25,7 +25,7 @@ else
 	DISTRO="linux"
 fi
 
-# Define THEME_DIR based on distro
+# Define grub | grub2 to use
 if command -v grub2-mkconfig > /dev/null 2>&1 && [ -d "/boot/grub2" ]; then
     GRUB_ALIAS="grub2"
 	GRUB_COMMAND="grub2-mkconfig"

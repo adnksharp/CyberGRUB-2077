@@ -4,6 +4,9 @@ set THEME_NAME "CyberGRUB-2077"
 set THEME_URL "https://github.com/adnksharp/CyberGRUB-2077"
 # set THEME_DIR "/boot/grub/themes"
 set GRUB_CFG "/etc/default/grub"
+set GRUB_ALIAS "grub"
+set GRUB_COMMAND ""
+set GRUB_CONFIG_PATH ""
 set LNG (string sub -l 2 $LANG)
 set SYS_LANG "./lang/$LNG.fish"
 set LOGO "samurai"
@@ -21,11 +24,21 @@ if test -z "$DISTRO"
 	end
 end
 
-# Set theme dir based on distro
-if test "$DISTRO" = "fedora" -o "$DISTRO" = "rhel" -o "$DISTRO" = "centos" -o "$DISTRO" = "rocky" -o "$DISTRO" = "almalinux"
-	set THEME_DIR "/boot/grub2/themes"
+# Set grub | grub2 to use
+if command -q grub2-mkconfig
+	set GRUB_COMMAND "grub2-mkconfig"
+
+	if test -d "/boot/grub2"
+		set GRUB_ALIAS "grub2"
+	else
+		set GRUB_ALIAS "grub"
+	end
+else if command -q grub-mkconfig
+	set GRUB_COMMAND "grub-mkconfig"
+	set GRUB_ALIAS "grub"
 else
-	set THEME_DIR "/boot/grub/themes"
+	printf "$LNG_NO_GRUB"
+	exit 1
 end
 
 # Set lang outs
@@ -152,8 +165,8 @@ printf "$LNG_EDIT_OK"
 
 # Update GRUB
 printf "$LNG_UP_CHECK"
-if type -q grub-mkconfig
-	sudo grub-mkconfig -o /boot/grub/grub.cfg  > /dev/null 2>&1
+if test -n "$GRUB_COMMAND"
+	sudo $GRUB_COMMAND -o "$GRUB_CONFIG_PATH" > /dev/null 2>&1
 	if test $status -ne 0
 		printf "$LNG_UP_FAIL"
 		exit 1
