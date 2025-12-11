@@ -30,6 +30,9 @@ if command -v grub2-mkconfig > /dev/null 2>&1 && [ -d "/boot/grub2" ]; then
     GRUB_ALIAS="grub2"
 elif command -v grub2-mkconfig > /dev/null 2>&1 && [ -d "/boot/grub" ]; then
     GRUB_ALIAS="grub"
+else
+    printf "$LNG_NO_GRUB"
+    exit 1
 fi
 
 THEME_DIR="/boot/${GRUB_ALIAS}/themes"
@@ -180,17 +183,11 @@ printf "$LNG_EDIT_OK"
 
 # Updating GRUB
 printf "$LNG_UP_CHECK"
-if command -v grub2-mkconfig > /dev/null 2>&1; then
-    sudo grub2-mkconfig -o /boot/${GRUB_ALIAS}/grub.cfg > /dev/null 2>&1
-
-    if [ $? -ne 0 ]; then
-        printf "$LNG_UP_FAIL"
-        exit 1
-    fi
-    printf "$LNG_UP_OK"
-else
-    printf "$LNG_NO_GRUB"
-    exit 1
+sudo grub2-mkconfig -o /boot/${GRUB_ALIAS}/grub.cfg > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+	printf "$LNG_UP_FAIL"
+	exit 1
 fi
+printf "$LNG_UP_OK"
 
 printf "$LNG_FINISH"
