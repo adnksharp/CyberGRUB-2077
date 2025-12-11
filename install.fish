@@ -86,7 +86,7 @@ if set -ql _flag_l
 	end
 
 	if test (math "$i % 4") -ne 0
-		set LLL (math "(4 - ($i % 4)) * 20")
+		set LLL (math "($i % 4) * 20")
 		printf "$(SPACE (math "$OUT_LEN - $LLL"))\e[1;31m║\n"
 	end
 	printf "\e[1;31m$(MARGIN '╚' '┘')\e[0m\n"
