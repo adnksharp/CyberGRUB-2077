@@ -5,7 +5,7 @@ THEME_URL="https://github.com/adnksharp/CyberGRUB-2077"
 
 GRUB_ALIAS="grub"
 SYS_LANG="./lang/${LANG:0:2}.sh"
-LOGO="samurai"
+LOGO='samurai'
 
 source ./scripts/outs.sh
 
@@ -88,13 +88,11 @@ while true; do
 			;;
 		-L|--logo)
 			# LOGO="$2"
-			# Check if the logo exists
 			if [[ ! -f "./img/logos/${2}.png" ]]; then
 				printf "$LNG_ERR_LOGO"
 				exit 1
 			else
 				LOGO="$2"
-				printf "\033[1A\033[K║ [\e[1;36m$LOGO\e[1;31m] $(SPACE $OUT_LEN-$((${#LOGO} + 4)))║\n\e[1;31m$(MARGIN ╚ ┘)\n"
 			fi
 			shift 2
 			;;
@@ -108,6 +106,8 @@ while true; do
 			;;
 	esac
 done
+
+printf "\033[1A\033[K║ [\e[1;36m$LOGO\e[1;31m] $(SPACE $OUT_LEN-$((${#LOGO} + 4)))║\n\e[1;31m$(MARGIN ╚ ┘)\n"
 
 # Check root
 printf "$LNG_ROOT_CHECK"
