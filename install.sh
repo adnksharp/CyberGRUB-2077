@@ -30,10 +30,6 @@ if command -v grub2-mkconfig > /dev/null 2>&1 && [ -d "/boot/grub2" ]; then
     GRUB_ALIAS="grub2"
 elif command -v grub2-mkconfig > /dev/null 2>&1 && [ -d "/boot/grub" ]; then
     GRUB_ALIAS="grub"
-else
-    # Si no se encuentra el comando o directorio, salimos
-    printf "$LNG_NO_GRUB"
-    exit 1
 fi
 
 THEME_DIR="/boot/${GRUB_ALIAS}/themes"
