@@ -26,8 +26,14 @@ else
 fi
 
 # Define THEME_DIR based on distro
-if [[ "$DISTRO" == "fedora" || "$DISTRO" == "centos" || "$DISTRO" == "rhel" || "$DISTRO" == "rocky" || "$DISTRO" == "almalinux" ]]; then
-	GRUB_ALIAS="grub2"
+if command -v grub2-mkconfig > /dev/null 2>&1 && [ -d "/boot/grub2" ]; then
+    GRUB_ALIAS="grub2"
+elif command -v grub2-mkconfig > /dev/null 2>&1 && [ -d "/boot/grub" ]; then
+    GRUB_ALIAS="grub"
+else
+    # Si no se encuentra el comando o directorio, salimos
+    printf "$LNG_NO_GRUB"
+    exit 1
 fi
 
 THEME_DIR="/boot/${GRUB_ALIAS}/themes"
@@ -180,6 +186,7 @@ printf "$LNG_EDIT_OK"
 printf "$LNG_UP_CHECK"
 if command -v grub2-mkconfig > /dev/null 2>&1; then
 	sudo grub2-mkconfig -o /boot/${GRUB_ALIAS}/grub.cfg > /dev/null 2>&1
+	exit 1
 	if [ $? -ne 0 ]; then
 		printf "$LNG_UP_FAIL"
 		exit 1
