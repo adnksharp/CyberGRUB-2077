@@ -5,7 +5,6 @@ THEME_URL="https://github.com/adnksharp/CyberGRUB-2077"
 
 GRUB_ALIAS="grub"
 SYS_LANG="./lang/${LANG:0:2}.sh"
-LOGO='samurai'
 
 source ./scripts/outs.sh
 
@@ -33,6 +32,7 @@ fi
 
 THEME_DIR="/boot/${GRUB_ALIAS}/themes"
 GRUB_CFG="/etc/default/grub"
+LOGO='samurai'
 
 # Set lang outs
 if [ ! -f "$SYS_LANG" ]; then
