@@ -188,8 +188,8 @@ if command -v grub2-mkconfig > /dev/null 2>&1; then
 	fi
 	printf "$LNG_UP_OK"
 else
-	exit 1
 	printf "$LNG_NO_GRUB"
+	exit 1
 fi
 
 printf "$LNG_FINISH"
