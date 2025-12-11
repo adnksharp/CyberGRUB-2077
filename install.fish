@@ -103,7 +103,7 @@ if set -ql _flag_L
 		set z (string length \"$LOGO\")
 	end
 end
-printf "\033[1A\033[K║ [\e[1;36m%s\e[1;31m] %s║\n\e[1;31m%s\e[0m\n" "$LOGO" (SPACE (math "$OUT_LEN - $z - 2")) (MARGIN '╚' '┘')
+printf "\033[1A\033[K║ [\e[1;36m%s\e[1;31m] %s║\n\e[1;31m%s\e[0m\n" "$LOGO" (SPACE (math "$OUT_LEN - $z + 4")) (MARGIN '╚' '┘')
 
 # Check root
 printf "$LNG_ROOT_CHECK"
