@@ -164,25 +164,20 @@ set -l GRUB_THEME_PATH "GRUB_THEME=\"$THEME_DIR/$THEME_NAME/theme.txt\""
 printf "$LNG_EDIT_CHECK"
 # sleep 4
 if grep -qE "^#?GRUB_THEME=" "$GRUB_CFG"
-    sed -i -E "s|^#?GRUB_THEME=.*|$GRUB_THEME_PATH|" "$GRUB_CFG"
+	sed -i -E "s|^#?GRUB_THEME=.*|$GRUB_THEME_PATH|" "$GRUB_CFG"
 else
-    echo "" >> "$GRUB_CFG"
-    echo "$GRUB_THEME_PATH" >> "$GRUB_CFG"
+	echo "" >> "$GRUB_CFG"
+	echo "$GRUB_THEME_PATH" >> "$GRUB_CFG"
 end
 printf "$LNG_EDIT_OK"
 
 # Update GRUB
 printf "$LNG_UP_CHECK"
-if test -n "$GRUB_COMMAND"
-	sudo $GRUB_COMMAND -o "$GRUB_CONFIG_PATH" > /dev/null 2>&1
-	if test $status -ne 0
-		printf "$LNG_UP_FAIL"
-		exit 1
-	end
-	printf "$LNG_UP_OK"
-else
-	printf "$LNG_NO_GRUB"
+sudo $GRUB_COMMAND -o "$GRUB_CONFIG_PATH" > /dev/null 2>&1
+if test $status -ne 0
+	printf "$LNG_UP_FAIL"
 	exit 1
 end
+printf "$LNG_UP_OK"
 
 printf "$LNG_FINISH"
