@@ -95,6 +95,7 @@ while true; do
 			else
 				LOGO="$2"
 			fi
+			shift 2
 			;;
 		--)
 			shift
