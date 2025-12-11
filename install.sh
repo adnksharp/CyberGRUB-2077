@@ -181,7 +181,7 @@ printf "$LNG_EDIT_OK"
 # Updating GRUB
 printf "$LNG_UP_CHECK"
 if command -v grub2-mkconfig > /dev/null 2>&1; then
-	sudo grub2-mkconfig -o /boot/${GRUB_ALIAS}/grub.cfg > /dev/null 2>&1
+	sudo grub2-mkconfig -o /boot/grub/grub.cfg > /dev/null 2>&1
 	if [ $? -ne 0 ]; then
 		printf "$LNG_UP_FAIL"
 		exit 1
