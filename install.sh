@@ -32,7 +32,6 @@ fi
 
 THEME_DIR="/boot/${GRUB_ALIAS}/themes"
 GRUB_CFG="/etc/default/grub"
-LOGO='samurai'
 
 # Set lang outs
 if [ ! -f "$SYS_LANG" ]; then
@@ -48,6 +47,8 @@ if [ $? -ne 0 ]; then
 	printf "\033[1A\033[K"
 	exit 1
 fi
+
+LOGO='samurai'
 
 eval set -- "$OPTS"
 
@@ -94,7 +95,6 @@ while true; do
 			else
 				LOGO="$2"
 			fi
-			shift 2
 			;;
 		--)
 			shift
