@@ -101,7 +101,7 @@ while true; do
 			break
 			;;
 		*)
-			printf "$LNG_ERR_OPT"
+			printf "<BAD>"
 			exit 1
 			;;
 	esac
