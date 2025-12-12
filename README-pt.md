@@ -2,6 +2,11 @@
 
 ![](./preview.png)
 
+Tema do GRUB inspirado em Cyberpunk 2077.
+
+<details>
+  <summary><h2>LOGOS</h2></summary>
+
 |![4m](./img/logos/4m.png)|![alma](./img/logos/alma.png)|![alpine](./img/logos/alpine.png)|![antergos](./img/logos/antergos.png)|![antix](./img/logos/antix.png)|![arch](./img/logos/arch.png)|![bedrock](./img/logos/bedrock.png)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 4m | alma | alpine | antergos | antix | arch | bedrock | 
@@ -30,6 +35,8 @@
 |![6th-street](./img/logos/6th-street.png)|![aldecaldos](./img/logos/aldecaldos.png)|![valentinos](./img/logos/valentinos.png)|![the-mox](./img/logos/the-mox.png)|![animals](./img/logos/animals.png)| | |
 | 6th-street | aldecaldos | valentinos | the-mox | animals | | |
 
+</details>
+
 <a href="README.md">
     <img src="https://img.shields.io/badge/ENGLISH-white?style=for-the-badge"/>
 </a>
@@ -42,23 +49,21 @@
     <img src="https://img.shields.io/badge/PORTUGUÊS-white?style=for-the-badge"/>
 </a>
 
-Tema do GRUB inspirado em Cyberpunk 2077.
-
 ## Instalação
 
-1. Clone o repositório
+### 1. Clone o repositório
 
 ```shell
 git clone https://github.com/adnksharp/CyberGRUB-2077
 ```
 
-2. Vá para a pasta onde o repositório foi baixado
+### 2. Vá para a pasta onde o repositório foi baixado
 
 ```shell
 cd CyberGRUB-2077
 ```
 
-3. Execute o script de instalação como administrador
+### 3. Execute o script de instalação como administrador
 
 ```shell
 sudo $SHELL ./install.sh
@@ -67,7 +72,8 @@ sudo $SHELL ./install.sh
 > [!IMPORTANT]
 > No caso de fish, é melhor usar `install.fish`
 
-![](img/out-pt.svg)
+<details>
+	<summary><h4>3.1 Opções extras</h4></summary>
 
 Opcionalmente, você pode especificar um logotipo diferente usando as opções `-L` ou `--logo`:
 
@@ -75,7 +81,9 @@ Opcionalmente, você pode especificar um logotipo diferente usando as opções `
 sudo $SHELL ./install.sh -L <logo>
 ```
 
-Para ver a lista de logotipos disponíveis, execute:
+![](img/out-pt.svg)
+
+Para ver a lista de logotipos disponíveis, use a opção `-l` ou `--list`:
 
 ```shell
 sudo $SHELL ./install.sh -l
@@ -83,4 +91,17 @@ sudo $SHELL ./install.sh -l
 
 ![](img/list-pt.svg)
 
-4. Teste seu novo tema
+
+Para ver a mensagem de ajuda, use a opção `-h` ou `--help`:
+
+```shell
+sudo $SHELL ./install.sh -h
+```
+
+![](img/help-pt.svg)
+
+</details>
+
+### 4. Teste seu novo tema
+
+![](./preview.png)
