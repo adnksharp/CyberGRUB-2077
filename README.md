@@ -4,11 +4,23 @@
 
 |![4m](./img/logos/4m.png)|![alma](./img/logos/alma.png)|![alpine](./img/logos/alpine.png)|![antergos](./img/logos/antergos.png)|![antix](./img/logos/antix.png)|![arch](./img/logos/arch.png)|![bedrock](./img/logos/bedrock.png)|![clear](./img/logos/clear.png)|![debian](./img/logos/debian.png)|![deepin](./img/logos/deepin.png)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|---|
+| 4m | alma | alpine | antergos | antix | arch | bedrock | clear | debian | deepin |
 |![elementary](./img/logos/elementary.png)|![endeavouros](./img/logos/endeavouros.png)|![endless](./img/logos/endless.png)|![fedora](./img/logos/fedora.png)|![feren](./img/logos/feren.png)|![garuda](./img/logos/garuda.png)|![gentoo](./img/logos/gentoo.png)|![guix](./img/logos/guix.png)|![kali](./img/logos/kali.png)|![kaos](./img/logos/kaos.png)|
+| elementary | endeavouros | endless | fedora | feren | garuda | gentoo | guix | kali | kaos |
 |![kubuntu](./img/logos/kubuntu.png)|![lfs](./img/logos/lfs.png)|![linux](./img/logos/linux.png)|![linuxmint](./img/logos/linuxmint.png)|![lite](./img/logos/lite.png)|![lubuntu](./img/logos/lubuntu.png)|![mabox](./img/logos/mabox.png)|![macosx](./img/logos/macosx.png)|![mageia](./img/logos/mageia.png)|![manjaro](./img/logos/manjaro.png)|
+| kubuntu | lfs | linux | linuxmint | lite | lubuntu | mabox | macos | mageia | manjaro |
 |![mate](./img/logos/mate.png)|![mx-linux](./img/logos/mx-linux.png)|![neon](./img/logos/neon.png)|![netrunner](./img/logos/netrunner.png)|![nixos](./img/logos/nixos.png)|![openmandriva](./img/logos/openmandriva.png)|![opensuse](./img/logos/opensuse.png)|![parrot](./img/logos/parrot.png)|![peppermint](./img/logos/peppermint.png)|![pop](./img/logos/pop.png)|
-|![puppy](./img/logos/puppy.png)|![q4os](./img/logos/q4os.png)|![qubes](./img/logos/qubes.png)|![raspios](./img/logos/raspios.png)|![reborn](./img/logos/reborn.png)|![redhat](./img/logos/redhat.png)|![rosa](./img/logos/rosa.png)|![samurai](./img/logos/samurai.png)|![septor](./img/logos/septor.png)|![slackware](./img/logos/slackware.png)|
+| mate | mx-linux | neon | netrunner | nixos | openmandriva | opensuse | parrot | peppermint | pop |
+|![puppy](./img/logos/puppy.png)|![q4os](./img/logos/q4os.png)|![qubes](./img/logos/qubes.png)|![raspios](./img/logos/raspios.png)|![reborn](./img/logos/reborn.png)|![redhat](./img/logos/redhat.png)|![rosa](./img/logos/rosa.png)|![knoppix](./img/logos/knoppix.png)|![septor](./img/logos/septor.png)|![slackware](./img/logos/slackware.png)|
+| puppy | q4os |  qubes| raspios | reborn | redhat | rosa | knoppix | septor | slackware |
 |![tails](./img/logos/tails.png)|![tinycore](./img/logos/tinycore.png)|![ubuntu](./img/logos/ubuntu.png)|![ubuntuDDE](./img/logos/ubuntuDDE.png)|![unity](./img/logos/unity.png)|![void](./img/logos/void.png)|![windows](./img/logos/windows.png)|![xubuntu](./img/logos/xubuntu.png)|![zorin](./img/logos/zorin.png)|![freebsd](./img/logos/freebsd.png)|
+| tails | tinycore | ubuntu | ubuntuDDE | unity | void | windows | xubuntu | zorin | freebsd |
+|![apple](./img/logos/apple.png)|![bluestar](./img/logos/bluestar.png)|![arco](./img/logos/arco.png)|![centos](./img/logos/centos.png)|![cinnamon](./img/logos/cinnamon.png)|![bodhi](./img/logos/bodhi.png)|![gnu](./img/logos/gnu.png)|![solus](./img/logos/solus.png)|![cachyos](./img/logos/cachyos.png)|![samurai](./img/logos/samurai.png)|
+| apple | bluestar | arco | centos | cinnamon | bodhi | gnu | solus | cachyos | samurai |
+|![delamain](./img/logos/delamain.png)|![netwatch](./img/logos/netwatch.png)|![maelstrom](./img/logos/maelstrom.png)|![arasaka](./img/logos/arasaka.png)|![militech](./img/logos/militech.png)|![kang-tao](./img/logos/kang-tao.png)|![trauma-team](./img/logos/trauma-team.png)|![voodoo-boys](./img/logos/voodoo-boys.png)|![biotechnica](./img/logos/biotechnica.png)|![edgerunners](./img/logos/edgerunners.png)|
+| delamain | netwatch | maelstrom | arasaka | militech | kang-tao | trauma-team | voodoo-boys | biotechnica | edgerunners |
+|![6th-street](./img/logos/6th-street.png)|![aldecaldos](./img/logos/aldecaldos.png)|![valentinos](./img/logos/valentinos.png)|![the-mox](./img/logos/the-mox.png)|![animals](./img/logos/animals.png)|![barghest](./img/logos/barghest.png)|![tyger-claws](./img/logos/tyger-claws.png)|![wraiths](./img/logos/wraiths.png)| | |
+| 6th-street | aldecaldos | valentinos | the-mox | animals | barghest | tyger-claws | wraiths |  |  |
 
 <a href="README.md">
     <img src="https://img.shields.io/badge/ENGLISH-white?style=for-the-badge"/>
