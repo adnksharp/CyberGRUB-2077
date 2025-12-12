@@ -67,7 +67,7 @@ sudo $SHELL ./install.sh
 > [!IMPORTANT]
 > En el caso de fish, es preferible utilizar `install.fish`
 
-![](img/out-es.svg)
+    1. Opciones extra
 
 Optionamente, puedes especificar un logo diferente usando las opciones `-L` o `--logo`:
 
@@ -75,7 +75,9 @@ Optionamente, puedes especificar un logo diferente usando las opciones `-L` o `-
 sudo $SHELL ./install.sh -L <logo>
 ```
 
-Para ver la lista de logos disponibles, ejecuta:
+![](img/out-es.svg)
+
+Para ver la lista de logos disponibles  usa la opción `-l` o `--list`:
 
 ```shell
 sudo $SHELL ./install.sh -l
@@ -83,4 +85,14 @@ sudo $SHELL ./install.sh -l
 
 ![](img/list-es.svg)
 
+Para ver el mensaje de ayuda usa la opción `-h` o `--help`:
+
+```shell
+sudo $SHELL ./install.sh -h
+```
+
+![](img/help-es.svg)
+
 4. Prueba tu nuevo tema
+
+![](./preview.png)
