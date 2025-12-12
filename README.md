@@ -5,7 +5,7 @@
 GRUB Theme inspired by Cyberpunk 2077.
 
 <details>
-  <summary><h2>LGOGOS</h2></summary>
+  <summary><h2>LOGOS</h2></summary>
 
 |![4m](./img/logos/4m.png)|![alma](./img/logos/alma.png)|![alpine](./img/logos/alpine.png)|![antergos](./img/logos/antergos.png)|![antix](./img/logos/antix.png)|![arch](./img/logos/arch.png)|![bedrock](./img/logos/bedrock.png)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
