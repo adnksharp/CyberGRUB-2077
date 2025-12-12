@@ -2,6 +2,11 @@
 
 ![](./preview.png)
 
+GRUB Theme inspired by Cyberpunk 2077.
+
+<details>
+  <summary><h2>LGOGOS</h2></summary>
+
 |![4m](./img/logos/4m.png)|![alma](./img/logos/alma.png)|![alpine](./img/logos/alpine.png)|![antergos](./img/logos/antergos.png)|![antix](./img/logos/antix.png)|![arch](./img/logos/arch.png)|![bedrock](./img/logos/bedrock.png)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 4m | alma | alpine | antergos | antix | arch | bedrock | 
@@ -30,6 +35,8 @@
 |![6th-street](./img/logos/6th-street.png)|![aldecaldos](./img/logos/aldecaldos.png)|![valentinos](./img/logos/valentinos.png)|![the-mox](./img/logos/the-mox.png)|![animals](./img/logos/animals.png)| | |
 | 6th-street | aldecaldos | valentinos | the-mox | animals | | |
 
+</details>
+
 <a href="README.md">
     <img src="https://img.shields.io/badge/ENGLISH-white?style=for-the-badge"/>
 </a>
@@ -42,32 +49,31 @@
     <img src="https://img.shields.io/badge/PORTUGUÊS-white?style=for-the-badge"/>
 </a>
 
-GRUB Theme inspired by Cyberpunk 2077.
-
 ## Installation
 
-1. Clone the repo
+### 1. Clone the repo
 
 ```shell
 git clone https://github.com/adnksharp/CyberGRUB-2077
 ```
 
-2. Go into the folder where the repository was downloaded
+### 2. Go into the folder where the repository was downloaded
 
 ```shell
 cd CyberGRUB-2077
 ```
 
-3. Execute the installation script as admin
+### 3. Execute the installation script as admin
 
 ```shell
 sudo $SHELL ./install.sh
 ```
 
 > [!IMPORTANT]
-> In case of fish, it's better to use `install.fish`
+> In case of fish, it's better to use `sudo fish install.fish`
 
-![](img/out.svg)
+<details>
+	<summary><h4>3.1 Extra options</h4></summary>
 
 Optionally, you can specify a different logo by using the `-L` or `--logo` options:
 
@@ -75,7 +81,9 @@ Optionally, you can specify a different logo by using the `-L` or `--logo` optio
 sudo $SHELL ./install.sh -L <logo>
 ```
 
-For see the list of available logos, run:
+![](img/out.svg)
+
+For see the list of available logos use `-l` o `--list`:
 
 ```shell
 sudo $SHELL ./install.sh -l
@@ -83,4 +91,14 @@ sudo $SHELL ./install.sh -l
 
 ![](img/list.svg)
 
-4. Test your new theme
+For see the help message use `-h` o `--help`:
+
+```shell
+sudo $SHELL ./install.sh -h
+```
+
+![](img/help.svg)
+
+</details>
+
+### 4. Test your new theme
