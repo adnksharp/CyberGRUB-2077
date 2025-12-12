@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="155.09248mm"
+   height="48.409222mm"
+   viewBox="0 0 155.09248 48.409222"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-290.6133,-46.935065)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;font-family:Monospace;-inkscape-font-specification:'Monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#00d7d7;fill-opacity:1;stroke-width:0.264583"
+       x="290.0545"
+       y="48.490814"
+       id="text53"><tspan
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+         x="290.0545"
+         y="48.490814"
+         id="tspan65">╔════════════════════════════════════════════════════════════════════════════════╗</tspan><tspan
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+         x="290.0545"
+         y="52.459564"
+         id="tspan154">║ CyberGRUB 2077                                                                 ║</tspan><tspan
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+         x="290.0545"
+         y="56.428314"
+         id="tspan155">║ INSTALLATION SCRIPT                                                            ║</tspan><tspan
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+         x="290.0545"
+         y="60.397064"
+         id="tspan156">║                                                                                ║</tspan><tspan
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+         x="290.0545"
+         y="64.365814"
+         id="tspan157">║ Usage:                                                                         ║</tspan><tspan
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+         x="290.0545"
+         y="68.334564"
+         id="tspan158">║   <tspan
+   style="fill:#00d7d7;fill-opacity:1"
+   id="tspan166">sudo $SHELL &lt;operation&gt; [...]</tspan>                                                ║</tspan><tspan
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+         x="290.0545"
+         y="72.303314"
+         id="tspan159">║                                                                                ║</tspan><tspan
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+         x="290.0545"
+         y="76.272064"
+         id="tspan160">║ Operations:                                                                    ║</tspan><tspan
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+         x="290.0545"
+         y="80.240814"
+         id="tspan161">║   <tspan
+   style="fill:#00d7d7;fill-opacity:1"
+   id="tspan167">-h, --help: Show this help message</tspan>                                           ║</tspan><tspan
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+         x="290.0545"
+         y="84.209564"
+         id="tspan162">║   <tspan
+   style="fill:#00d7d7;fill-opacity:1"
+   id="tspan168">-l, --list: List available logos</tspan>                                             ║</tspan><tspan
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+         x="290.0545"
+         y="88.178314"
+         id="tspan163">║   <tspan
+   style="fill:#00d7d7;fill-opacity:1"
+   id="tspan169">-L, --logo &lt;logo&gt;: Specify a logo to use</tspan>                                     ║</tspan><tspan
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+         x="290.0545"
+         y="92.147064"
+         id="tspan164">║   <tspan
+   style="fill:#00d7d7;fill-opacity:1"
+   id="tspan170">By default, the 'samurai' logo will be used if none is specified</tspan>             ║</tspan><tspan
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+         x="290.0545"
+         y="96.115814"
+         id="tspan165">╚════════════════════════════════════════════════════════════════════════════════┘</tspan></text>
+  </g>
+</svg>
