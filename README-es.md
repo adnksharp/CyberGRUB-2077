@@ -2,6 +2,11 @@
 
 ![](./preview.png)
 
+Tema de GRUB inspirado en Cyberpunk 2077.
+
+<details>
+  <summary><h2>LOGOS</h2></summary>
+	
 |![4m](./img/logos/4m.png)|![alma](./img/logos/alma.png)|![alpine](./img/logos/alpine.png)|![antergos](./img/logos/antergos.png)|![antix](./img/logos/antix.png)|![arch](./img/logos/arch.png)|![bedrock](./img/logos/bedrock.png)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 4m | alma | alpine | antergos | antix | arch | bedrock | 
@@ -30,6 +35,8 @@
 |![6th-street](./img/logos/6th-street.png)|![aldecaldos](./img/logos/aldecaldos.png)|![valentinos](./img/logos/valentinos.png)|![the-mox](./img/logos/the-mox.png)|![animals](./img/logos/animals.png)| | |
 | 6th-street | aldecaldos | valentinos | the-mox | animals | | |
 
+</details>
+
 <a href="README.md">
     <img src="https://img.shields.io/badge/ENGLISH-white?style=for-the-badge"/>
 </a>
@@ -42,32 +49,31 @@
     <img src="https://img.shields.io/badge/PORTUGUÊS-white?style=for-the-badge"/>
 </a>
 
-Tema de GRUB inspirado en Cyberpunk 2077.
-
 ## Instalación
 
-1. Clona el repositorio
+### 1. Clona el repositorio
 
 ```shell
 git clone https://github.com/adnksharp/CyberGRUB-2077
 ```
 
-2. Entra en la carpeta dondes se descargó el repositorio
+### 2. Entra en la carpeta dondes se descargó el repositorio
 
 ```shell
 cd CyberGRUB-2077
 ```
 
-3. Ejecuta el script de instalación como administrador
+### 3. Ejecuta el script de instalación como administrador
 
 ```shell
 sudo $SHELL ./install.sh
 ```
 
 > [!IMPORTANT]
-> En el caso de fish, es preferible utilizar `install.fish`
+> En el caso de fish, es preferible utilizar `sudo fish ./install.fish`
 
-    1. Opciones extra
+<details>
+	<summary><h4>3.1 Opciones extra</h4></summary>
 
 Optionamente, puedes especificar un logo diferente usando las opciones `-L` o `--logo`:
 
@@ -93,6 +99,8 @@ sudo $SHELL ./install.sh -h
 
 ![](img/help-es.svg)
 
-4. Prueba tu nuevo tema
+</details>
+
+### 4. Prueba tu nuevo tema
 
 ![](./preview.png)
