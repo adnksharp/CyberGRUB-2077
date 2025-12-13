@@ -2,10 +2,10 @@
 
 ![](./preview.png)
 
-Tema do GRUB inspirado em Cyberpunk 2077.
+Тема GRUB, вдохновленная Cyberpunk 2077.
 
 <details>
-  <summary><h2>LOGOS</h2></summary>
+  <summary><h2>ЛОГОТИПЫ</h2></summary>
 
 |![4m](./img/logos/4m.png)|![alma](./img/logos/alma.png)|![alpine](./img/logos/alpine.png)|![antergos](./img/logos/antergos.png)|![antix](./img/logos/antix.png)|![arch](./img/logos/arch.png)|![bedrock](./img/logos/bedrock.png)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -53,59 +53,58 @@ Tema do GRUB inspirado em Cyberpunk 2077.
     <img src="https://img.shields.io/badge/РУССКИЙ-white?style=for-the-badge"/>
 </a>
 
-## Instalação
+## Установка
 
-### 1. Clone o repositório
+### 1. Клонируйте репозиторий
 
 ```shell
 git clone https://github.com/adnksharp/CyberGRUB-2077
 ```
 
-### 2. Vá para a pasta onde o repositório foi baixado
+### 2. Перейдите в папку, куда был скачан репозиторий
 
 ```shell
 cd CyberGRUB-2077
 ```
 
-### 3. Execute o script de instalação como administrador
+### 3. Выполните скрипт установки от имени администратора
 
 ```shell
 sudo $SHELL ./install.sh
 ```
 
 > [!IMPORTANT]
-> No caso de fish, é melhor usar `install.fish`
+> В случае использования fish предпочтительнее выполнить `sudo fish ./install.fish`
 
 <details>
-	<summary><h4>3.1 Opções extras</h4></summary>
+	<summary><h4>3.1 Дополнительные опции</h4></summary>
 
-Opcionalmente, você pode especificar um logotipo diferente usando as opções `-L` ou `--logo`:
+Дополнительно вы можете указать другой логотип с помощью опций `-L` или `--logo`:
 
 ```shell
 sudo $SHELL ./install.sh -L <logo>
 ```
 
-![](img/out-pt.svg)
+![](img/out-ru.svg)
 
-Para ver a lista de logotipos disponíveis, use a opção `-l` ou `--list`:
+Чтобы увидеть список доступных логотипов, используйте опцию `-l` или `--list`:
 
 ```shell
 sudo $SHELL ./install.sh -l
 ```
 
-![](img/list-pt.svg)
+![](img/list-ru.svg)
 
-
-Para ver a mensagem de ajuda, use a opção `-h` ou `--help`:
+Чтобы увидеть сообщение помощи, используйте опцию `-h` или `--help`:
 
 ```shell
 sudo $SHELL ./install.sh -h
 ```
 
-![](img/help-pt.svg)
+![](img/help-ru.svg)
 
 </details>
 
-### 4. Teste seu novo tema
+### 4. Проверьте вашу новую тему
 
 ![](./preview.png)

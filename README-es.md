@@ -49,6 +49,10 @@ Tema de GRUB inspirado en Cyberpunk 2077.
     <img src="https://img.shields.io/badge/PORTUGUÊS-white?style=for-the-badge"/>
 </a>
 
+<a href="README-ru.md">
+    <img src="https://img.shields.io/badge/РУССКИЙ-white?style=for-the-badge"/>
+</a>
+
 ## Instalación
 
 ### 1. Clona el repositorio
