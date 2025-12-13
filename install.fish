@@ -46,9 +46,9 @@ set GRUB_CONFIG_PATH "/boot/$GRUB_ALIAS/grub.cfg"
 
 # Set lang outs
 if test -f "$SYS_LANG"
-    source "$SYS_LANG"
+	source "$SYS_LANG"
 else
-    source ./lang/en.fish
+	source ./lang/en.fish
 end
 
 # Check options
@@ -128,8 +128,8 @@ end
 printf "$LNG_GIT_CHECK"
 # sleep 2
 if type -q git
-	#git reset --hard
-	#git pull --rebase
+	git reset --hard
+	git pull --rebase
 	if test $status -ne 0
 		printf "$LNG_GIT_FAIL"
 		exit 1

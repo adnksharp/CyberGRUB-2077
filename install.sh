@@ -27,14 +27,14 @@ fi
 
 # Define grub | grub2 to use
 if command -v grub2-mkconfig > /dev/null 2>&1 && [ -d "/boot/grub2" ]; then
-    GRUB_ALIAS="grub2"
+	GRUB_ALIAS="grub2"
 	GRUB_COMMAND="grub2-mkconfig"
 elif command -v grub-mkconfig > /dev/null 2>&1 && [ -d "/boot/grub" ]; then
-    GRUB_ALIAS="grub"
+	GRUB_ALIAS="grub"
 	GRUB_COMMAND="grub-mkconfig"
 else
-    printf "$LNG_NO_GRUB"
-    exit 1
+	printf "$LNG_NO_GRUB"
+	exit 1
 fi
 
 THEME_DIR="/boot/${GRUB_ALIAS}/themes"
@@ -121,8 +121,8 @@ printf "\033[1A\033[K║ [\e[1;36m$LOGO\e[1;31m] $(SPACE $OUT_LEN-$((${#LOGO} + 
 printf "$LNG_ROOT_CHECK"
 # sleep 2
 if [ "$EUID" -ne 0 ]; then
-    printf "$LNG_ROOT_FAIL"
-    exit 1
+	printf "$LNG_ROOT_FAIL"
+	exit 1
 fi
 printf "$LNG_ROOT_OK"
 
@@ -130,22 +130,22 @@ printf "$LNG_ROOT_OK"
 printf "$LNG_DIR_CHECK"
 # sleep 2
 if [ ! -d "$THEME_DIR" ]; then
-    mkdir -p "$THEME_DIR"
-    printf "$LNG_DIR_FAIL"
+	mkdir -p "$THEME_DIR"
+	printf "$LNG_DIR_FAIL"
 else
-    printf "$LNG_DIR_OK"
+	printf "$LNG_DIR_OK"
 fi
 
 # update repo with git
 printf "$LNG_GIT_CHECK"
 # sleep 2
 if command -v git >/dev/null 2>&1; then
-    git reset --hard 
-    git pull --rebase
-    printf "$LNG_GIT_OK"
+	git reset --hard 
+	git pull --rebase
+	printf "$LNG_GIT_OK"
 else
-    printf "$LNG_GIT_FAIL"
-    exit 1
+	printf "$LNG_GIT_FAIL"
+	exit 1
 fi
 
 # Copy theme
@@ -175,11 +175,11 @@ GRUB_THEME_PATH="GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\""
 printf "$LNG_EDIT_CHECK"
 # sleep 4
 if grep -qE "^#?GRUB_THEME=" "$GRUB_CFG"; then
-    sed -i -E "s|^#?GRUB_THEME=.*|$GRUB_THEME_PATH|" "$GRUB_CFG"
+	sed -i -E "s|^#?GRUB_THEME=.*|$GRUB_THEME_PATH|" "$GRUB_CFG"
 else
-    # Added extra line before the GRUB_THEME line
-    echo "" >> "$GRUB_CFG"
-     echo "$GRUB_THEME_PATH" >> "$GRUB_CFG"
+	# Added extra line before the GRUB_THEME line
+	echo "" >> "$GRUB_CFG"
+	 echo "$GRUB_THEME_PATH" >> "$GRUB_CFG"
 fi
 printf "$LNG_EDIT_OK"
 
