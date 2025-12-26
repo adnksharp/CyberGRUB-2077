@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 THEME_NAME="CyberGRUB-2077"
 THEME_URL="https://github.com/adnksharp/CyberGRUB-2077"
@@ -140,8 +140,8 @@ fi
 printf "$LNG_GIT_CHECK"
 # sleep 2
 if command -v git >/dev/null 2>&1; then
-	git reset --hard 
-	git pull --rebase
+	#git reset --hard 
+	#git pull --rebase
 	printf "$LNG_GIT_OK"
 else
 	printf "$LNG_GIT_FAIL"
@@ -170,17 +170,37 @@ else
 	exit 1
 fi
 
-# Modify GRUB
+# UPDATE GRUB CFG
 GRUB_THEME_PATH="GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\""
 printf "$LNG_EDIT_CHECK"
 # sleep 4
+# Update THEME
 if grep -qE "^#?GRUB_THEME=" "$GRUB_CFG"; then
 	sed -i -E "s|^#?GRUB_THEME=.*|$GRUB_THEME_PATH|" "$GRUB_CFG"
 else
-	# Added extra line before the GRUB_THEME line
 	echo "" >> "$GRUB_CFG"
-	 echo "$GRUB_THEME_PATH" >> "$GRUB_CFG"
+	echo "$GRUB_THEME_PATH" >> "$GRUB_CFG"
 fi
+
+# Update TERMINAL_OUTPUT
+sed -i 's/^GRUB_TERMINAL_OUTPUT=/#GRUB_TERMINAL_OUTPUT=/' "$GRUB_CFG"
+
+# Check GFXMODE
+if grep -qE "^#?GRUB_GFXMODE=" "$GRUB_CFG"; then
+    sed -i "s|^#?GRUB_GFXMODE=.*|GRUB_GFXMODE=auto|" "$GRUB_CFG"
+else
+    echo "GRUB_GFXMODE=auto" >> "$GRUB_CFG"
+fi
+sed -i 's/^#GRUB_GFXMODE=/GRUB_GFXMODE=/' "$GRUB_CFG"
+
+# Check GFXPAYLOAD
+if grep -qE "^#?GRUB_GFXPAYLOAD_LINUX=" "$GRUB_CFG"; then
+    sed -i "s|^#?GRUB_GFXPAYLOAD_LINUX=.*|GRUB_GFXPAYLOAD_LINUX=keep|" "$GRUB_CFG"
+else
+    echo "GRUB_GFXPAYLOAD_LINUX=keep" >> "$GRUB_CFG"
+fi
+sed -i 's/^#GRUB_GFXPAYLOAD_LINUX=/GRUB_GFXPAYLOAD_LINUX=/' "$GRUB_CFG"
+
 printf "$LNG_EDIT_OK"
 
 # Updating GRUB
