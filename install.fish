@@ -175,19 +175,17 @@ sed -i 's/^GRUB_TERMINAL_OUTPUT=/#GRUB_TERMINAL_OUTPUT=/' "$GRUB_CFG"
 
 # Check GFXMODE
 if grep -qE "^#?GRUB_GFXMODE=" "$GRUB_CFG"
-    sed -i "s|^#?GRUB_GFXMODE=.*|GRUB_GFXMODE=auto|" "$GRUB_CFG"
+    sed -i -E "s|^#?GRUB_GFXMODE=.*|GRUB_GFXMODE=auto|" "$GRUB_CFG"
 else
     echo "GRUB_GFXMODE=auto" >> "$GRUB_CFG"
 end
-sed -i 's/^#GRUB_GFXMODE=/GRUB_GFXMODE=/' "$GRUB_CFG"
 
 # Check GFXPAYLOAD
 if grep -qE "^#?GRUB_GFXPAYLOAD_LINUX=" "$GRUB_CFG"
-    sed -i "s|^#?GRUB_GFXPAYLOAD_LINUX=.*|GRUB_GFXPAYLOAD_LINUX=keep|" "$GRUB_CFG"
+    sed -i -E "s|^#?GRUB_GFXPAYLOAD_LINUX=.*|GRUB_GFXPAYLOAD_LINUX=keep|" "$GRUB_CFG"
 else
     echo "GRUB_GFXPAYLOAD_LINUX=keep" >> "$GRUB_CFG"
 end
-sed -i 's/^#GRUB_GFXPAYLOAD_LINUX=/GRUB_GFXPAYLOAD_LINUX=/' "$GRUB_CFG"
 
 printf "$LNG_EDIT_OK"
 
