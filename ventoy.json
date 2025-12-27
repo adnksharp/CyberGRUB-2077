@@ -1,0 +1,136 @@
+{
+	"control": [
+		{ "VTOY_DEFAULT_MENU_MODE": "1" },
+		{ "VTOY_FILT_DOT_UNDERSCORE_FILE": "1" }		
+	],
+	
+	"theme": {
+		"file": "/ventoy/themes/CyberGRUB-2077/theme.txt",		
+		"ventoy_left": "99%",
+		"ventoy_top": "99%",
+		"gfxmode": "1920x1080",
+		"fonts":[
+			"/ventoy/themes/CyberGRUB-2077/CyberGRUB-2077/Rajdhani_Regular_16.pf2",
+			"/ventoy/themes/CyberGRUB-2077/CyberGRUB-2077/Rajdhani_Regular_18.pf2",
+			"/ventoy/themes/CyberGRUB-2077/CyberGRUB-2077/Rajdhani_Regular_24.pf2",
+			"/ventoy/themes/CyberGRUB-2077/CyberGRUB-2077/Rajdhani_Regular_32.pf2",
+			"/ventoy/themes/CyberGRUB-2077/CyberGRUB-2077/terminus-ttf-16.pf2"
+		]
+	},
+	
+	"menu_class": [
+		{
+			"key": "archlinux",
+			"alias": "Arch Linux",
+			"class": "arch"
+		},
+		{
+			"key": "gentoo",
+			"alias": "Gentoo",
+			"class": "gentoo"
+		},
+		{
+			"key": "livegui",
+			"alias": "Gentoo",
+			"class": "gentoo"
+		},
+		{
+			"key": "install",
+			"alias": "Gentoo",
+			"class": "gentoo"
+		},
+		{
+			"key": "debian",
+			"alias": "Debian",
+			"class": "debian"
+		},
+		{
+			"key": "neon",
+			"alias": "Neon",
+			"class": "neon"
+		},
+		{
+			"key": "ubuntu",
+			"alias": "Ubuntu",
+			"class": "ubuntu"
+		},
+		{
+			"key": "EndeavourOS",
+			"alias": "EndeavourOS",
+			"class": "endeavouros"
+		},
+		{
+			"key": "deepin",
+			"alias": "Deepin",
+			"class": "deepin"
+		},
+		{
+			"key": "garuda",
+			"alias": "Garuda",
+			"class": "garuda"
+		},
+		{
+			"key": "TrixiePup",
+			"alias": "Puppy Linux TrixiePup",
+			"class": "puppy"
+		},
+		{
+			"key": "BookwormPup",
+			"alias": "Puppy Linux BookwormPup",
+			"class": "puppy"
+		},
+		{
+			"key": "vanilladpup",
+			"alias": "Puppy Linux vanilladpup",
+			"class": "puppy"
+		},
+		{
+			"key": "F96",
+			"alias": "Puppy Linux F96-CE",
+			"class": "puppy"
+		},
+		{
+			"key": "NoblePup",
+			"alias": "Puppy Linux NoblePup",
+			"class": "puppy"
+		},
+		{
+			"key": "S15Pup",
+			"alias": "Puppy Linux S15Pup",
+			"class": "puppy"
+		},
+		{
+			"key": "VoidPup",
+			"alias": "Puppy Linux VoidPup",
+			"class": "puppy"
+		},
+		{
+			"dir": "rhel",
+			"alias": "Red Hat",
+			"class": "redhat"
+		},
+		{
+			"key": "Win11",
+			"alias": "Windows 11",
+			"class": "windows"
+		},
+		{
+			"key": "Win10",
+			"alias": "Windows 10",
+			"class": "windows"
+		},
+		{
+			"key": "4MLinux",
+			"alias": "4MLinux",
+			"class": "4MLinux"
+		},
+		{
+			"key": "uefi",
+			"class": "uefi"
+		},
+		{
+			"key": "power",
+			"class": "power"
+		}
+	]
+}
