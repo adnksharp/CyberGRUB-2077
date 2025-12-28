@@ -37,7 +37,7 @@ else
 	exit 1
 fi
 
-THEME_DIR="/boot/${GRUB_ALIAS}/themes"
+THEME_DIR="/boot/${GRUBZorin_ALIAS}/themes"
 GRUB_CFG="/etc/default/grub"
 
 # Set lang outs
@@ -48,7 +48,7 @@ else
 fi
 
 # Check options
-OPTS=$(getopt --options "hlL:" --longoptions "help,list,logo:" --name "$0" -- "$@")
+OPTS=$(getopt --options "hplL:" --longoptions "help,ventoy,list,logo:" --name "$0" -- "$@")
 
 if [ $? -ne 0 ]; then
 	printf "\033[1A\033[K"
@@ -92,6 +92,16 @@ while true; do
 			else
 				printf "\e[1;31m$(MARGIN ╚ ┘)\e[0m\n"
 			fi
+			exit 0
+			;;
+		-p|--ventoy)
+			THEME_DIR="Ventoy"
+			
+			mkdir -p $THEME_DIR
+			cp -r $THEME_NAME "${THEME_DIR}/themes"
+			cp -f "./img/logos/${LOGO}.png" "${THEME_DIR}/themes/${THEME_NAME}/logo.png"
+			cp -f "./ventoy.json" $THEME_DIR
+
 			exit 0
 			;;
 		-L|--logo)
@@ -140,8 +150,8 @@ fi
 printf "$LNG_GIT_CHECK"
 # sleep 2
 if command -v git >/dev/null 2>&1; then
-	git reset --hard 
-	git pull --rebase
+	#git reset --hard 
+	#git pull --rebase
 	printf "$LNG_GIT_OK"
 else
 	printf "$LNG_GIT_FAIL"
