@@ -108,3 +108,28 @@ sudo $SHELL ./install.sh -h
 ### 4. Проверьте вашу новую тему
 
 ![](./preview.png)
+
+## Установка [VENTOY]
+
+### 1. Перейдите в каталог Ventoy
+
+### 2. Клонируйте репозиторий
+
+```shell
+git clone https://github.com/adnksharp/CyberGRUB-2077
+```
+
+### 3. Перейдите в папку, куда был загружен репозиторий
+
+```shell
+cd CyberGRUB-2077
+```
+
+### 4. Запустите скрипт установки с параметром `-p` или `--ventoy`
+
+```shell
+$SHELL ./install.sh -p
+```
+
+> [!ВАЖНО]
+> В случае использования fish лучше использовать `fish install.fish -p

@@ -53,7 +53,7 @@ Tema de GRUB inspirado en Cyberpunk 2077.
     <img src="https://img.shields.io/badge/РУССКИЙ-white?style=for-the-badge"/>
 </a>
 
-## Instalación
+## Instalación [LOCAL]
 
 ### 1. Clona el repositorio
 
@@ -61,7 +61,7 @@ Tema de GRUB inspirado en Cyberpunk 2077.
 git clone https://github.com/adnksharp/CyberGRUB-2077
 ```
 
-### 2. Entra en la carpeta dondes se descargó el repositorio
+### 2. Entra en la carpeta donde descargaste el repositorio
 
 ```shell
 cd CyberGRUB-2077
@@ -108,3 +108,28 @@ sudo $SHELL ./install.sh -h
 ### 4. Prueba tu nuevo tema
 
 ![](./preview.png)
+
+## Instalación [VENTOY]
+
+### 1. Accede al directorio de Ventoy
+
+### 2. Clona el repositorio
+
+```shell
+git clone https://github.com/adnksharp/CyberGRUB-2077
+```
+
+### 3. Accede a la carpeta donde descargaste el repositorio
+
+```shell
+cd CyberGRUB-2077
+```
+
+### 4. Ejecuta el script de instalación con `-p` o `--ventoy`
+
+```shell
+$SHELL ./install.sh -p
+```
+
+> [!IMPORTANTE]
+> En el caso de fish, es mejor usar `fish install.fish -p`

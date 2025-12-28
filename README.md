@@ -109,7 +109,7 @@ sudo $SHELL ./install.sh -h
 
 ## Installation [VENTOY]
 
-### 1. Go to
+### 1. Go to Ventoy directory
 
 ### 2. Clone the repo
 
