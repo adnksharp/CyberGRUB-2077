@@ -97,10 +97,10 @@ while true; do
 		-p|--ventoy)
 			THEME_DIR="Ventoy"
 			
-			mkdir -p $THEME_DIR
-			cp -r $THEME_NAME "${THEME_DIR}/themes"
-			cp -f "./img/logos/${LOGO}.png" "${THEME_DIR}/themes/${THEME_NAME}/logo.png"
-			cp -f "./ventoy.json" $THEME_DIR
+			mkdir -p "${THEME_DIR}/themes"
+			cp -r $THEME_NAME "${THEME_DIR}/themes" > /dev/null 2>&1
+			cp -f "./img/logos/${LOGO}.png" "${THEME_DIR}/themes/${THEME_NAME}/logo.png" > /dev/null 2>&1
+			cp -f "./ventoy.json" "${THEME_DIR}/ventoy.json" > /dev/null 2>&1
 
 			exit 0
 			;;

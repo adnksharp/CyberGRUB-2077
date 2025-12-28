@@ -52,11 +52,21 @@ else
 end
 
 # Check options
-argparse 'h/help' 'l/list' 'L/logo=' -- $argv
+argparse 'h/help' 'p/ventoy' 'l/list' 'L/logo=' -- $argv
 or return
 
 if set -ql _flag_h
 	printf "$LNG_HELP"
+	exit 0
+end
+
+if set -ql _flag_p
+	set THEME_DIR "./Ventoy"
+
+	mkdir -p "$THEME_DIR/themes"
+	cp -r $THEME_NAME "$THEME_DIR/themes"
+	cp -f "./img/logos/$LOGO.png" "$THEME_DIR/themes/$THEME_NAME/logo.png"
+	cp -f "./ventoy.json" "$THEME_DIR/ventoy.json"
 	exit 0
 end
 

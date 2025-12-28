@@ -1,0 +1,401 @@
+{
+	"control": [
+		{ "VTOY_DEFAULT_MENU_MODE": "1" },
+		{ "VTOY_FILT_DOT_UNDERSCORE_FILE": "1" }		
+	],
+	
+	"theme": {
+		"file": "/ventoy/themes/CyberGRUB-2077/theme.txt",		
+		"ventoy_left": "99%",
+		"ventoy_top": "99%",
+		"gfxmode": "1920x1080",
+		"fonts":[
+			"/ventoy/themes/CyberGRUB-2077/CyberGRUB-2077/Rajdhani_Regular_16.pf2",
+			"/ventoy/themes/CyberGRUB-2077/CyberGRUB-2077/Rajdhani_Regular_18.pf2",
+			"/ventoy/themes/CyberGRUB-2077/CyberGRUB-2077/Rajdhani_Regular_24.pf2",
+			"/ventoy/themes/CyberGRUB-2077/CyberGRUB-2077/Rajdhani_Regular_32.pf2",
+			"/ventoy/themes/CyberGRUB-2077/CyberGRUB-2077/terminus-ttf-16.pf2"
+		]
+	},
+	
+	"menu_class": [
+		{
+			"key": "archlinux",
+			"alias": "Arch Linux",
+			"class": "arch"
+		},
+		{
+			"key": "gentoo",
+			"alias": "Gentoo",
+			"class": "gentoo"
+		},
+		{
+			"key": "livegui",
+			"alias": "Gentoo",
+			"class": "gentoo"
+		},
+		{
+			"key": "install",
+			"alias": "Gentoo",
+			"class": "gentoo"
+		},
+		{
+			"key": "debian",
+			"alias": "Debian",
+			"class": "debian"
+		},
+		{
+			"key": "neon",
+			"alias": "Neon",
+			"class": "neon"
+		},
+		{
+			"key": "ubuntu",
+			"alias": "Ubuntu",
+			"class": "ubuntu"
+		},
+		{
+			"key": "EndeavourOS",
+			"alias": "EndeavourOS",
+			"class": "endeavouros"
+		},
+		{
+			"key": "deepin",
+			"alias": "Deepin",
+			"class": "deepin"
+		},
+		{
+			"key": "garuda",
+			"alias": "Garuda",
+			"class": "garuda"
+		},
+		{
+			"key": "TrixiePup",
+			"alias": "Puppy Linux TrixiePup",
+			"class": "puppy"
+		},
+		{
+			"key": "BookwormPup",
+			"alias": "Puppy Linux BookwormPup",
+			"class": "puppy"
+		},
+		{
+			"key": "vanilladpup",
+			"alias": "Puppy Linux vanilladpup",
+			"class": "puppy"
+		},
+		{
+			"key": "F96",
+			"alias": "Puppy Linux F96-CE",
+			"class": "puppy"
+		},
+		{
+			"key": "NoblePup",
+			"alias": "Puppy Linux NoblePup",
+			"class": "puppy"
+		},
+		{
+			"key": "S15Pup",
+			"alias": "Puppy Linux S15Pup",
+			"class": "puppy"
+		},
+		{
+			"key": "VoidPup",
+			"alias": "Puppy Linux VoidPup",
+			"class": "puppy"
+		},
+		{
+			"dir": "rhel",
+			"alias": "Red Hat",
+			"class": "redhat"
+		},
+		{
+			"key": "Win11",
+			"alias": "Windows 11",
+			"class": "windows"
+		},
+		{
+			"key": "Win10",
+			"alias": "Windows 10",
+			"class": "windows"
+		},
+		{
+			"key": "4MLinux",
+			"alias": "4MLinux",
+			"class": "4MLinux"
+		},
+		{
+			"key": "AlmaLinux",
+			"alias": "Alma Linux",
+			"class": "alma"
+		},
+		{
+			"key": "alpine",
+			"alias": "Alpine Linux",
+			"class": "AlpineLinux"
+		},
+		{
+			"key": "antiX",
+			"alias": "antiX",
+			"class": "antix"
+		},
+		{
+			"key": "artix",
+			"alias": "Artix Linux",
+			"class": "artix"
+		},
+		{
+			"key": "bslx",
+			"alias": "BluestarLinux",
+			"class": "bluestar"
+		},
+		{
+			"key": "bodhi",
+			"alias": "Bodhi Linux",
+			"class": "bodhi"
+		},
+		{
+			"key": "boron",
+			"alias": "BunsenLabs Linux Boron",
+			"class": "bunsenlabs"
+		},
+		{
+			"key": "cachyos",
+			"alias": "CachyOS",
+			"class": "cachyos"
+		},
+		{
+			"key": "CentOS",
+			"alias": "CentOS",
+			"class": "centos"
+		},
+		{
+			"key": "ubuntucinnamon",
+			"alias": "Ubuntu Cinnamon",
+			"class": "cinnamon"
+		},
+		{
+			"key": "clear",
+			"alias": "Clear Linux",
+			"class": "clear"
+		},
+		{
+			"key": "elementaryos",
+			"alias": "elementary OS",
+			"class": "elementary"
+		},
+		{
+			"key": "eos",
+			"alias": "Endless OS",
+			"class": "endless"
+		},
+		{
+			"key": "Fedora",
+			"alias": "Fedora",
+			"class": "fedora"
+		},
+		{
+			"key": "Feren",
+			"alias": "Feren OS",
+			"class": "feren"
+		},
+		{
+			"key": "FreeBSD",
+			"alias": "FreeBSD",
+			"class": "freebsd"
+		},
+		{
+			"key": "kali",
+			"alias": "Kali Linux",
+			"class": "kali"
+		},
+		{
+			"key": "KaOS",
+			"alias": "KaOS",
+			"class": "kaos"
+		},
+		{
+			"key": "KNOPPIX",
+			"alias": "KNOPPIX",
+			"class": "knoppix"
+		},
+		{
+			"key": "kubuntu",
+			"alias": "Kubuntu",
+			"class": "kubuntu"
+		},
+		{
+			"key": "linuxmint",
+			"alias": "Linux Mint",
+			"class": "linuxmint"
+		},
+		{
+			"key": "linux-lite",
+			"alias": "Linux Lite",
+			"class": "lite"
+		},
+		{
+			"key": "lubuntu",
+			"alias": "Lubuntu",
+			"class": "lubuntu"
+		},
+		{
+			"key": "mabox",
+			"alias": "Mabox Linux",
+			"class": "mabox"
+		},
+		{
+			"key": "Mageia",
+			"alias": "Mageia",
+			"class": "mageia"
+		},
+		{
+			"key": "manjaro",
+			"alias": "Manjaro",
+			"class": "manjaro"
+		},
+		{
+			"key": "ubuntu-mate",
+			"alias": "Ubuntu MATE",
+			"class": "mate"
+		},
+		{
+			"key": "MX",
+			"alias": "MX Linux",
+			"class": "mxlinux"
+		},
+		{
+			"key": "netrunner",
+			"alias": "Netrunner GNU/Linux",
+			"class": "netrunner"
+		},
+		{
+			"key": "nixos",
+			"alias": "NixOS",
+			"class": "nixos"
+		},
+		{
+			"key": "openmandriva",
+			"alias": "OpenMandriva",
+			"class": "openmandriva"
+		},
+		{
+			"key": "Leap",
+			"alias": "openSUSE Leap",
+			"class": "opensuse"
+		},
+		{
+			"key": "openSUSE",
+			"alias": "openSUSE Tumbleweed",
+			"class": "opensuse"
+		},
+		{
+			"key": "Parrot",
+			"alias": "ParrotOS",
+			"class": "parrot"
+		},
+		{
+			"key": "PeppermintOS",
+			"alias": "PeppermintOS",
+			"class": "peppermint"
+		},
+		{
+			"key": "pop",
+			"alias": "Pop! OS",
+			"class": "pop"
+		},
+		{
+			"key": "q4os",
+			"alias": "Q4OS",
+			"class": "q4os"
+		},
+		{
+			"key": "Qubes",
+			"alias": "Qubes OS",
+			"class": ""
+		},
+		{
+			"key": "rebornos",
+			"alias": "RebornOS",
+			"class": "rebornos"
+		},
+		{
+			"key": "ROSA",
+			"alias": "POCA",
+			"class": "rosa"
+		},
+		{
+			"key": "Septor",
+			"alias": "Septor Linux",
+			"class": "septor"
+		},
+		{
+			"key": "slackware",
+			"alias": "Slackware",
+			"class": "slackware"
+		},
+		{
+			"key": "slackware64",
+			"alias": "Slackware",
+			"class": "slackware"
+		},
+		{
+			"key": "Solus",
+			"alias": "Solus",
+			"class": "solus"
+		},
+		{
+			"key": "tails",
+			"alias": "Tails",
+			"class": "tails"
+		},
+		{
+			"key": "Core",
+			"alias": "Core Linux",
+			"class": "tinycore"
+		},
+		{
+			"key": "CorePlus",
+			"alias": "Core Plus Linux",
+			"class": "tinycore"
+		},
+		{
+			"key": "TinyCore",
+			"alias": "Tiny Core Linux",
+			"class": "tinycore"
+		},
+		{
+			"key": "ubuntudde",
+			"alias": "UbuntuDDE",
+			"class": "ubuntudde"
+		},
+		{
+			"key": "ubuntu-unity",
+			"alias": "Ubuntu Unity",
+			"class": "unity"
+		},
+		{
+			"key": "void",
+			"alias": "Void",
+			"class": "void"
+		},
+		{
+			"key": "xubuntu",
+			"alias": "Xubuntu",
+			"class": "xubuntu"
+		},
+		{
+			"key": "Zorin",
+			"alias": "Zorin OS",
+			"class": "zorin"
+		},
+		{
+			"key": "uefi",
+			"class": "uefi"
+		},
+		{
+			"key": "power",
+			"class": "power"
+		}
+	]
+}
