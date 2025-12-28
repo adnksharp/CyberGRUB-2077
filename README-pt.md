@@ -132,5 +132,5 @@ cd CyberGRUB-2077
 $SHELL ./install.sh -p
 ```
 
-> [!IMPORTANTE]
+> [!IMPORTANT]
 > No caso do Fish, é melhor usar `fish install.fish -p`
