@@ -41,15 +41,15 @@
     <img src="https://img.shields.io/badge/ENGLISH-white?style=for-the-badge"/>
 </a>
 
-<a href="README-es.md">
+<a href="README.es.md">
 	<img src="https://img.shields.io/badge/ESPAÑOL-white?style=for-the-badge"/>
 </a>
 
-<a href="README-pt.md">
+<a href="README.pt.md">
     <img src="https://img.shields.io/badge/PORTUGUÊS-white?style=for-the-badge"/>
 </a>
 
-<a href="README-ru.md">
+<a href="README.ru.md">
     <img src="https://img.shields.io/badge/РУССКИЙ-white?style=for-the-badge"/>
 </a>
 
