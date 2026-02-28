@@ -37,7 +37,7 @@ else
 	exit 1
 fi
 
-THEME_DIR="/boot/${GRUBZorin_ALIAS}/themes"
+THEME_DIR="/boot/${GRUB_ALIAS}/themes"
 GRUB_CFG="/etc/default/grub"
 
 # Set lang outs
