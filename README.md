@@ -79,6 +79,11 @@ sudo $SHELL ./install.sh
 <details>
 	<summary><h4>3.1 Extra options</h4></summary>
 
+If you have a 4K resolution monitor, you can use the flag `-K` to use the 4K configuration. This uses the correct size fonts instead:
+```shell
+sudo $SHELL ./install.sh -K
+```
+
 Optionally, you can specify a different logo by using the `-L` or `--logo` options:
 
 ```shell
