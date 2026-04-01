@@ -48,7 +48,7 @@ else
 fi
 
 # Check options
-OPTS=$(getopt --options "hplL:" --longoptions "help,ventoy,list,logo:" --name "$0" -- "$@")
+OPTS=$(getopt --options "hplL:K" --longoptions "help,ventoy,list,logo:,4k" --name "$0" -- "$@")
 
 if [ $? -ne 0 ]; then
 	printf "\033[1A\033[K"
@@ -56,6 +56,7 @@ if [ $? -ne 0 ]; then
 fi
 
 LOGO='samurai'
+USE_4K=false
 
 eval set -- "$OPTS"
 
@@ -65,6 +66,10 @@ while true; do
 			printf "$LNG_HELP"
 			exit 0
 			;;
+		-K|--4k)
+                USE_4K=true
+                shift
+                ;;
 		-l|--list)
 			# List available logos from the img/logos directory
 			LOGOS="$(find ./img/logos -type f -printf '%f\n')"
@@ -167,6 +172,21 @@ if [ $? -eq 0 ]; then
 else
 	printf "$LNG_CP_FAIL"
 	exit 1
+fi
+if [ "$USE_4K" = true ]; then
+    printf "║ Using 4K resolution configuration...\n"
+    
+    DEST_THEME_DIR="${THEME_DIR}/${THEME_NAME}"
+    
+    if [ -f "${DEST_THEME_DIR}/theme4K.txt" ]; then
+        # Overwrite original theme.txt
+        mv -f "${DEST_THEME_DIR}/theme4K.txt" "${DEST_THEME_DIR}/theme.txt"
+    else
+        printf "║ [!] Error: theme4K.txt does not exist.\n"
+    fi
+else
+	# we won't use it
+	rm -f "${DEST_THEME_DIR}/theme4K.txt"
 fi
 
 # Copy logo.png to theme directory

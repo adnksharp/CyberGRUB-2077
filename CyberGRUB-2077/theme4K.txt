@@ -1,0 +1,142 @@
+# No Copyright
+
+# general settings
+title-text: ""
+desktop-image: "background.png"
+desktop-color: "#000000"
+terminal-font: "Terminus Regular 42"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
++ label {
+	font = "Rajdhani Regular 60"
+	left = 0%
+	top = 8
+	width = 100%
+	align = "center"
+	color = "#842624"
+	text = "GNU GRAND UNIFIED BOOTLOADER VER. 2.2"
+}
+
++ label {
+	font = "Rajdhani Regular 50"
+	left = 0%
+	top = 90
+	width = 100%
+	align = "center"
+	color = "#f75d54"
+	text = "[DISPLAY 1]"
+}
+
++ image {
+	file = "logo.png"
+	top = 0
+	left = 100%-200
+}
+
++ image {
+	file = "label.png"
+	top = 8
+	left = 8
+}
+
++ label {
+	font = "Rajdhani Regular 42"
+	left = 8
+	top = 160
+	width = 100%
+	color = "#842624"
+	text = "[ >> ] SELECT OPERATING SYSTEM"
+}
+
++ label {
+	font = "Rajdhani Regular 42"
+	left = 8
+	top = 210
+	width = 100%
+	color = "#842624"
+	text = "[      ] LOAD OPERATING SYSTEM"
+}
+
++ label {
+	font = "Rajdhani Regular 42"
+	left = 8
+	top = 260
+	width = 100%
+	color = "#842624"
+	text = "[      ] LOAD INITRAMFS"
+}
+
+# boot menu
++ boot_menu {
+    left = 15%
+    width = 70%
+    top = 30%
+    height = 40%	
+    item_font = "Rajdhani Regular 50"
+    item_color = "#74d6cf"
+    selected_item_font = "Rajdhani Regular 50"
+    selected_item_color = "#74d6cf"
+    icon_width = 50
+    icon_height = 50
+    item_height = 75
+    item_padding = 10
+    item_icon_space = 5
+    item_spacing = 5
+    menu_pixmap_style = "item/no_*.png"
+    selected_item_pixmap_style = "item/highlight_*.png"
+}
+
+# Show progress
++ progress_bar {
+  left = 0%
+  top = 100%-30
+  width = 100%
+  height = 30
+  id = "__timeout__"
+  text = "@TIMEOUT_NOTIFICATION_LONG@"
+  font = "Rajdhani Regular 18"
+  fg_color = "#ffffff"
+  bg_color = "#ffffff"
+  border_color = "#f75d54"
+  highlight_style = "progress_*.png"
+}
+
++ label {
+	font = "Rajdhani Regular 42"
+	left = 8
+	top = 100%-230
+	width = 100%
+	color = "#842624"
+	text = " ↑↓ - NAVIGATE"
+}
+
++ label {
+	font = "Rajdhani Regular 42"
+	left = 8
+	top = 100%-180
+	width = 100%
+	color = "#842624"
+	text = "<-' - CONFIRM"
+}
+
++ label {
+	font = "Rajdhani Regular 42"
+	left = 8
+	top = 100%-130
+	width = 100%
+	color = "#842624"
+	text = " E  - OPTIONS"
+}
+
++ label {
+	font = "Rajdhani Regular 42"
+	left = 8
+	top = 100%-80
+	width = 100%
+	color = "#842624"
+	text = " C  - COMMAND LINE"
+}
